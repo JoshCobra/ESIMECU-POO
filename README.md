@@ -11,11 +11,11 @@ Este repositorio tiene como objetivo proporcionar una guía clara y estructurada
 
 Te invitamos a clonar este repositorio en tu entorno local para practicar y contribuir con tus observaciones, sugerencias o mejoras. Tu participación es bien recibida y ayudará a enriquecer este recurso compartido.
 
-## Aspectos fundamentales que aborda este repositorio:
+### Aspectos fundamentales que aborda este repositorio:
 
 - Encapsulamiento: Cómo proteger los datos dentro de las clases y métodos.
 - Herencia: Implementación de jerarquías y reutilización de código.
-- Polimorfismo: La capacidad de las clases para redefinir comportamientos     heredados.
+- Polimorfismo: La capacidad de las clases para redefinir comportamientos heredados.
 - Abstracción: Simplificación de conceptos complejos mediante clases y objetos.
 - Ejercicios prácticos: Problemas reales que te ayudarán a entender la teoría y aplicarla en proyectos futuros.
 
