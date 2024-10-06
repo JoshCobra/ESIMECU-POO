@@ -2,7 +2,6 @@
 Realiza un programa que reconozca palíndromos (es decir, 
 palabras que tienen el mismo aspecto escritas invertidas), 
 ejemplo: es palíndromo ("radar") tendría que devolver True.'''
-#DE LA ROSA VAZQUEZ JOSUE
 
 a=1
 while a==1:

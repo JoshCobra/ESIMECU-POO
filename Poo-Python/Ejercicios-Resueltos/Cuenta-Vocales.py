@@ -1,7 +1,6 @@
 '''Realizar un programa que reciba una palabra y cuente cuantas letras "a" tiene, 
 cuantas letras "e" tiene y así hasta completar todas las vocales. 
 Que el usuario sea quien elija la palabra. '''
-#DE LA ROSA VAZQUEZ JOSUE
 
 n=1 
 while n==1:

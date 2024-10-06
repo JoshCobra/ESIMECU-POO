@@ -40,7 +40,6 @@ def eliminar_duplicados(lista_p):
     return lista_sin_duplicados
 
 def menu():
-    print("\tDE LA ROSA VAZQUEZ JOSUE\n")
     print("\t----- MENU -----")
     print("\t1. Crear lista de palabras")
     print("\t2. Imprimir lista")

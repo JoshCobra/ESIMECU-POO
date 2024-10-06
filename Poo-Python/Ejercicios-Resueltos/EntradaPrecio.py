@@ -1,5 +1,4 @@
 #Programa Calcula el Precio de la entrada segun la Edad
-#DE LA ROSA VAZQUEZ JOSUE
 
 e=1
 while e==1:

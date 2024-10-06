@@ -1,5 +1,4 @@
 #Realiza un programa que calcule la longitud de una cadena dada
-#DE LA ROSA VAZQUEZ JOSUE
 
 c=1
 while c==1:

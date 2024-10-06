@@ -33,7 +33,6 @@ def EscribirPila(pila):
         print("La pila esta vacía")
 
 def mostrar_menu():
-    print("\t DE LA ROSA VAZQUEZ JOSUE \n")
     print("\t ------ Menú ------")
     print("\t1. Añadir elemento a la pila")
     print("\t2. Sacar elemento de la pila")

@@ -1,5 +1,4 @@
 #Menu Actividad 23 Sep
-#DE LA ROSA VAZQUEZ JOSUE
 
 def menu():
     while True:

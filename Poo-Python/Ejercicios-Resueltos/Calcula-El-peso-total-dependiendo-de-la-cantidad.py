@@ -1,6 +1,5 @@
 
 # Programa que calcula el peso total de un pedido de payasos y muñecas
-#DE LA ROSA VAZQUEZ JOSUE
 
 peso_payaso = 112  # gramos
 peso_muñeca = 75  # gramos
