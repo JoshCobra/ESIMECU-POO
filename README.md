@@ -3,7 +3,7 @@
 
 # Programacion Orienteada a Objetos
   
-## <img src="ESIME-LOGO.png" width="80"> - ESIME CULHUACAN - <img src="IC-LOGO.png" width="80">
+## <img src="ESIME-LOGO.png" width="40"> - ESIME CULHUACAN - <img src="IC-LOGO.png" width="40">
 
 </div>
 
