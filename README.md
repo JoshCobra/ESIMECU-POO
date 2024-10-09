@@ -30,7 +30,7 @@ Te invitamos a clonar este repositorio en tu entorno local para practicar y cont
 
 Pagina Oficial de [ESIME CULHUACAN](https://www.esimecu.ipn.mx/) 
 
-Para Colaborar Asegurate de haber leido [Colabora](/colabora.md) primero
+Para Colaborar Asegurate de haber leido [Colabora](Colabora.md) primero
 
 > **Nota Importante:**
 > La mayoría de los archivos contenidos en este repositorio han sido desarrollados por estudiantes, bajo la supervisión total o parcial de los profesores capacitados de la institución. Si tienes algún reclamo relacionado con derechos de autor o consideras que es necesario otorgar créditos adicionales a los autores de códigos o documentos incluidos en este repositorio, te pedimos que te pongas en contacto con nosotros para solucionar cualquier inconveniente de manera oportuna.
