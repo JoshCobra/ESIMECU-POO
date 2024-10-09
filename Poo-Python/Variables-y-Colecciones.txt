@@ -1,0 +1,116 @@
+Variables y Colecciones
+
+Python tiene una función llamada print
+print("I'm Python. Nice to meet you!")  # => Soy Python. Encantado de conocerte.
+
+Por defecto, la función print también imprime una nueva línea al final.
+Usa el argumento opcional end para cambiar el carácter de finalización.
+print("Hello, World", end="!")  # => Hello, World!
+
+Forma simple de pedir datos al usuario
+input_string_var = input("Ingresa un dato: ")  # Devuelve los datos como una cadena.
+No hay declaraciones, solo asignaciones.
+
+La convención para nombrar variables es usar el estilo snake_case.
+some_var = 5
+some_var  # => 5
+
+Acceder a una variable no asignada previamente genera una excepción.
+Consulta el apartado de Control de Flujo para aprender más sobre el manejo de excepciones.
+some_unknown_var  # Lanza un NameError
+
+El if puede ser usado como una expresión
+Equivalente al operador ternario '?:' de C.
+"yay!" if 0 > 1 else "nay!"  # => "nay!"
+
+Las listas almacenan secuencias.
+li = []
+
+Puedes comenzar con una lista predefinida.
+other_li = [4, 5, 6]
+
+Agrega elementos al final de una lista con append.
+li.append(1)    # li ahora es [1]
+li.append(2)    # li ahora es [1, 2]
+li.append(4)    # li ahora es [1, 2, 4]
+li.append(3)    # li ahora es [1, 2, 4, 3]
+
+Remover el último elemento con pop.
+li.pop()        # => 3 y li ahora es [1, 2, 4]
+
+Acceder a una lista como lo harías con un array.
+li[0]   # => 1
+
+Ver el último elemento.
+li[-1]  # => 3
+
+Acceder fuera del rango genera un IndexError.
+li[4]  # Lanza un IndexError
+
+Puedes consultar rangos de elementos con la sintaxis de slice (rebanada).
+El índice inicial está incluido, el índice final no.
+li[1:3]   # Devuelve la lista desde el índice 1 al 3 => [2, 4]
+li[2:]    # Devuelve la lista desde el índice 2 en adelante => [4, 3]
+li[:3]    # Devuelve la lista desde el inicio hasta el índice 3  => [1, 2, 4]
+li[::2]   # Devuelve los elementos seleccionados con un tamaño de paso de 2 => [1, 4]
+li[::-1]  # Devuelve la lista en orden inverso => [3, 4, 2, 1]
+
+Haz una copia superficial de una lista usando slices.
+li2 = li[:]  # => li2 = [1, 2, 4, 3] pero (li2 es li) dará como resultado False.
+
+Eliminar elementos de una lista con "del".
+del li[2]  # li ahora es [1, 2, 3]
+
+Eliminar la primera aparición de un valor.
+li.remove(2)  # li ahora es [1, 3]
+li.remove(2)  # Lanza un ValueError ya que el 2 no está en la lista.
+
+Insertar un elemento en un índice específico.
+li.insert(1, 2)  # li ahora es [1, 2, 3] nuevamente.
+
+Obtener el índice del primer elemento que coincida con el argumento.
+li.index(2)  # => 1
+li.index(4)  # Lanza un ValueError ya que el 4 no está en la lista.
+
+Puedes sumar listas.
+li + other_li  # => [1, 2, 3, 4, 5, 6]
+
+Concatenar listas con "extend()".
+li.extend(other_li)  # Ahora li es [1, 2, 3, 4, 5, 6]
+
+Verificar la existencia de un elemento en una lista con "in".
+1 in li  # => True
+
+Examinar la longitud de una lista con "len()".
+len(li)  # => 6
+
+Las tuplas son como las listas pero son inmutables.
+tup = (1, 2, 3)
+tup[0]      # => 1
+tup[0] = 3  # Lanza un TypeError
+
+Una tupla de un solo elemento debe tener una coma al final.
+type((1))   # => <class 'int'>
+type((1,))  # => <class 'tuple'>
+type(())    # => <class 'tuple'>
+
+Puedes hacer la mayoría de las operaciones de listas en tuplas también.
+len(tup)         # => 3
+tup + (4, 5, 6)  # => (1, 2, 3, 4, 5, 6)
+tup[:2]          # => (1, 2)
+2 in tup         # => True
+
+Puedes descomponer tuplas (o listas) en variables.
+a, b, c = (1, 2, 3)  # a ahora es 1, b ahora es 2 y c ahora es 3
+
+También puedes hacer una descomposición extendida.
+a, *b, c = (1, 2, 3, 4)  # a ahora es 1, b ahora es [2, 3] y c ahora es 4.
+
+Las tuplas se crean por defecto si omites los paréntesis.
+d, e, f = 4, 5, 6  # La tupla (4, 5, 6) se descompone en d, e y f respectivamente.
+
+Mira qué fácil es intercambiar dos valores.
+e, d = d, e  # d ahora es 5 y e ahora es 4.
+
+
+Fuente: https://learnxinyminutes.com/docs/python/
