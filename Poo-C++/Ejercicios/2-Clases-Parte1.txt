@@ -2,6 +2,12 @@ Clases - Parte 1 (Clases-P1.cpp)
 Objetivo: Introducción a las clases y objetos en C++.
 
 Pasos:
+
 Define una clase con atributos y métodos básicos.
-Implementa un constructor para inicializar los valores.
-En el main, instancia la clase y utiliza sus métodos para mostrar los valores.
+Usa un constructor para inicializar los valores.
+En el main, instancia la clase y muestra los valores.
+
+Resultado esperado: Creación de un objeto con atributos básicos y demostración de la encapsulación. 
+
+Ejemplo:
+Valor del objeto: 5
