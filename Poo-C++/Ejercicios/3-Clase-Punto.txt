@@ -1,0 +1,7 @@
+Clase Punto (Class Punto.cpp)
+Objetivo: Crear una clase para representar puntos en el plano.
+
+Pasos:
+Define la clase Punto con atributos x y y para representar las coordenadas.
+Implementa métodos para modificar y mostrar las coordenadas.
+En el main, permite al usuario introducir las coordenadas de un punto y mostrarlas.
