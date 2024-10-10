@@ -3,8 +3,8 @@
  - [Tipos De Datos Y Operadores](Documentos/Tipos-de-datos-Primitivos-y-Operadores.txt)
  - [Variables Y Colecciones](Documentos/Variables-y-Colecciones.txt)
  - [Manejo De Cadenas De Texto](Documentos/Manejo-Cadenas-de-Texto.md)
-    1. [Ejemplo Operaciones Con Cadenas](Documentos/OperacionesConCadenas.PNG)
  - [Metodos Aplicables a Cadenas](Documentos/Metodos-Aplicables-a-Cadenas.txt)
+    1. [Ejemplo Operaciones Con Cadenas](Documentos/OperacionesConCadenas.PNG)
 
 # LISTA DE EJERCICIOS
 
