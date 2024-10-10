@@ -2,7 +2,7 @@
  [DOCUMENTOS](Documentos)
    -  [Sintaxis Basica](Documentos/Sintaxis-Basica.md)
    -  [Sobrecarga de Funciones](Documentos/Sobrecarga-de-Funciones.md)
-   -  [Argumentos Por Defecto de Una Funcion](Documentos/Argumentos-Por-Defecto-de-Una-Funcion.txt)
+   -  [Argumentos Por Defecto de Una Funcion](Documentos/Argumentos-Por-Defecto-de-Una-Funcion.md)
 
 # LISTA DE EJERCICIOS
 
