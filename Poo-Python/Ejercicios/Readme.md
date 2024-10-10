@@ -1,3 +1,5 @@
+# LISTA DE EJERCICIOS
+
 1. Escribir un programa que solicite por teclado 10 notas de allumnos y nos informe cuantos tienen notas mayores o iguales a 7 y cuantos menores.
 
 2. Escribir un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€.
@@ -10,11 +12,11 @@
 
 6. Realiza un programa que reconozca palíndromos (es decir, palabras que tienen el mismo aspecto escritas invertidas), ejemplo: es palíndromo ("radar") tendría que devolver True. 
 
-7.Realizar un programa que reciba una palabra y cuente cuantas letras "a" tiene, cuantas letras "e" tiene y así hasta completar todas las vocales. Que el usuario sea quien elija la palabra. 
+7. Realizar un programa que reciba una palabra y cuente cuantas letras "a" tiene, cuantas letras "e" tiene y así hasta completar todas las vocales. Que el usuario sea quien elija la palabra. 
 
-8. Realizar un programa, en el cual plasmes al menos 6 funciones de las que existen en python, se incluye un archivo para tu facil acceso en: /ESIMECU-POO/Poo-Python/Documentos/Metodos Aplicables a Cadenas.txt
+8. Realizar un programa, en el cual plasmes al menos 6 funciones de las que existen en python, se incluye un archivo para tu facil acceso en: `/ESIMECU-POO/Poo-Python/Documentos/Metodos Aplicables a Cadenas.txt`
 
-9.Los teléfonos de una empresa tienen el siguiente formato prefijo-número-extension donde el prefijo es el código del país +34, y la extensión tiene dos dígitos (por ejemplo +34-913724710-56). Escribir un programa que pregunte por un número de teléfono con este formato y muestre por pantalla el número de teléfono sin el prefijo y la extensión. 
+9. Los teléfonos de una empresa tienen el siguiente formato prefijo-número-extension donde el prefijo es el código del país +34, y la extensión tiene dos dígitos (por ejemplo +34-913724710-56). Escribir un programa que pregunte por un número de teléfono con este formato y muestre por pantalla el número de teléfono sin el prefijo y la extensión. 
 
 10. Escribir un programa que pida al usuario que introduzca una frase en la consola y muestre por pantalla la frase invertida. 
 
@@ -22,18 +24,18 @@
 
 12. Escribir un programa que solicite por teclado 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores
 
-Realizar la carga del nombre de una persona y luego mostrar el primer caracter del nombre y la cantidad de letras que lo componen, mostrar un mensaje si comienza con vocal dicho nombre
+ Realizar la carga del nombre de una persona y luego mostrar el primer caracter del nombre y la cantidad de letras que lo componen, mostrar un mensaje si comienza con vocal dicho nombre
 
-Ingresar un mail por teclado. Verificar si el string ingresado contiene solo un caracter "@".
+ Ingresar un mail por teclado. Verificar si el string ingresado contiene solo un caracter "@".
 
-Se cuenta con la siguiente información:
-Las edades de 5 estudiantes del turno mañana.
-Las edades de 6 estudiantes del turno tarde.
-Las edades de 11 estudiantes del turno noche.
-Las edades de cada estudiante deben ingresarse por teclado.
-a) Obtener el promedio de las edades de cada turno (tres promedios)
-b) Imprimir dichos promedios (promedio de cada turno)
-c) Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un promedio de edades mayor.
+ Se cuenta con la siguiente información:
+ Las edades de 5 estudiantes del turno mañana.
+ Las edades de 6 estudiantes del turno tarde.
+ Las edades de 11 estudiantes del turno noche.
+ Las edades de cada estudiante deben ingresarse por teclado.
+ a) Obtener el promedio de las edades de cada turno (tres promedios)
+ b) Imprimir dichos promedios (promedio de cada turno)
+ c) Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un promedio de edades mayor.
 
 13. Escribir un programa que solicite por teclado 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores
 
