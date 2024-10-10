@@ -13,7 +13,7 @@ Te invitamos a clonar este repositorio en tu entorno local para practicar y cont
 
 <div align="middle">
 
-[POO en Python](Poo-Python)   -   [POO en C++](Poo-C++)
+### [POO en Python](Poo-Python)   -   [POO en C++](Poo-C++)
 
 </div>
 
