@@ -24,8 +24,11 @@ int main()
 }
 ```
 Explicación:
+
 `doSomethingWithInts():` Como no se proporcionan argumentos, se utilizan los valores predeterminados, a = 1 y b = 4.
+
 `doSomethingWithInts(20):` Solo se proporciona un argumento, por lo que a = 20 y b toma su valor predeterminado, b = 4.
+
 `doSomethingWithInts(20, 5):` Se proporcionan ambos argumentos, por lo que a = 20 y b = 5.
 
 ### Restricciones en los argumentos por defecto
