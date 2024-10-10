@@ -1,0 +1,7 @@
+Clases - Parte 2 (Clases-P2.cpp)
+Objetivo: Continuación del uso de clases con más detalles.
+
+Pasos:
+Amplía la clase de la Parte 1 con más atributos y métodos.
+Añade funcionalidad para modificar y mostrar los atributos.
+En el main, demuestra el uso de estas nuevas funcionalidades.
