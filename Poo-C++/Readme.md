@@ -7,7 +7,7 @@
 # LISTA DE EJERCICIOS
 
 ### Nivel Básico: Introducción a Clases y Objetos
-1. Clase Simple (calse-simple.cpp)
+1. [Clase Simple](Ejercicios/Ejercicio-1.txt)
 2. Clases - Parte 1 (Clases-P1.cpp)
 3. Clase Punto (Class Punto.cpp)
 4. Clases - Parte 2 (Clases-P2.cpp)
