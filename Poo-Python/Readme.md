@@ -37,23 +37,7 @@
  b) Imprimir dichos promedios (promedio de cada turno)
  c) Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un promedio de edades mayor.
 
-13. Escribir un programa que solicite por teclado 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores
-
-Realizar la carga del nombre de una persona y luego mostrar el primer caracter del nombre y la cantidad de letras que lo componen, mostrar un mensaje si comienza con vocal dicho nombre
-
-Ingresar un mail por teclado. Verificar si el string ingresado contiene solo un caracter "@".
-
-Se cuenta con la siguiente información:
-Las edades de 5 estudiantes del turno mañana.
-Las edades de 6 estudiantes del turno tarde.
-Las edades de 11 estudiantes del turno noche.
-Las edades de cada estudiante deben ingresarse por teclado.
-a) Obtener el promedio de las edades de cada turno (tres promedios)
-b) Imprimir dichos promedios (promedio de cada turno)
-c) Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un promedio de edades mayor.
-
-
-14. Escriba un programa que permita crear una lista de palabras, y realice las siguientes accciones utilizando un menu:
+13. Escriba un programa que permita crear una lista de palabras, y realice las siguientes accciones utilizando un menu:
 
 El programa tiene que pedir un número y luego solicitar ese número de palabras para crear la lista
 El programa tiene que imprimier la lista. 
@@ -63,15 +47,15 @@ El programa pida una palabra y elimine esa palabra de la lista.
 El programa elimine las palabras diplicadas de la lista. 
 Salir
 
-15. Realiza un programa de una Agenda, utilizando lista de listas de listas de listas, en donde se deberá seleccionar:
- Año
+14. Realiza un programa de una Agenda, utilizando lista de listas de listas de listas, en donde se deberá seleccionar:
+Año
 Mes
 Dia 
 Hora
 Información del evento que se agendo.
 Se podrán registrar "n" numero de eventos.
 
-16. Vamos a crear un programa para trabajar con una pila. Una pila es una estructura de datos que nos permite guardar un conjunto de variables. La característica fundamental es que el último elemento que se añade al conjunto es el primero que se puede sacar. 
+15. Vamos a crear un programa para trabajar con una pila. Una pila es una estructura de datos que nos permite guardar un conjunto de variables. La característica fundamental es que el último elemento que se añade al conjunto es el primero que se puede sacar. 
 
 Para representar una pila vamos a utilizar una lista de cadenas de caracteres. 
 
@@ -92,7 +76,7 @@ Mostrar pila
 Salir 
 
 
-17. Solicitar al usuario que ingrese números, los cuales se guardarán en una lista. 
+16. Solicitar al usuario que ingrese números, los cuales se guardarán en una lista. 
 Finalizar al ingresar el número 0, el cual no debe guardarse.
 A continuación, solicitar al usuario que ingrese un número y, si el número está en la lista, 
 eliminar su primera ocurrencia. Mostrar un mensaje si no es posible eliminar.
