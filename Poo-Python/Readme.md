@@ -1,3 +1,11 @@
+### Para apoyarte a resolver los ejercicios checa:
+[DOCUMENTOS](Documentos)
+ - [Tipos De Datos Y Operadores](Documentos/Tipos-de-datos-Primitivos-y-Operadores.txt)
+ - [Variables Y Colecciones](Documentos/Variables-y-Colecciones.txt)
+ - [Manejo De Cadenas De Texto](Documentos/Manejo-Cadenas-de-Texto.txt)
+    1. [Ejemplo Operaciones Con Cadenas](Documentos/OperacionesConCadenas.PNG)
+ - [Metodos Aplicables a Cadenas](Documentos/Metodos-Aplicables-a-Cadenas.txt)
+
 # LISTA DE EJERCICIOS
 
 1. Escribir un programa que **solicite por teclado 10 notas de alumnos y nos informe cuantos tienen notas mayores o iguales a 7** y cuantos menores.
@@ -14,7 +22,7 @@
 
 7. Realizar un **programa que reciba una palabra y cuente** cuantas letras "a" tiene, cuantas letras "e" tiene y así hasta completar **todas las vocales.** Que el usuario sea quien elija la palabra. 
 
-8. Realizar un programa, en el cual plasmes al menos **6 funciones de las que existen en python**, se incluye un archivo para tu facil acceso en: `/ESIMECU-POO/Poo-Python/Documentos/Metodos Aplicables a Cadenas.txt`
+8. Realizar un programa, en el cual plasmes al menos **6 metodos de las que existen en python**, se incluye un archivo para tu facil acceso en: `/ESIMECU-POO/Poo-Python/Documentos/Metodos-Aplicables-a-Cadenas.txt` o [Metodos Aplicables a Cadenas](Documentos/Metodos-Aplicables-a-Cadenas.txt)
 
 9. Los teléfonos de una empresa tienen el siguiente formato prefijo-número-extension donde el prefijo es el código del país +34, y la extensión tiene dos dígitos (por ejemplo +34-913724710-56). Escribir un **programa que pregunte por un número de teléfono con este formato y muestre por pantalla el número de teléfono sin el prefijo y la extensión.** 
 
