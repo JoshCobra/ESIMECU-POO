@@ -1,8 +1,8 @@
 ### Para apoyarte a resolver los ejercicios checa:
-- [Documentos](Documentos)
-   - [Sintaxis Basica](Sintaxis-Basica.md)
-   - [Sobrecarga de Funciones](Sobrecarga-de-Funciones.md)
-   - [Argumentos Por Defecto de Una Funcion](Argumentos-Por-Defecto-de-Una-Funcion.txt)
+- [DOCUMENTOS](Documentos)
+   1.  [Sintaxis Basica](Sintaxis-Basica.md)
+   2.  [Sobrecarga de Funciones](Sobrecarga-de-Funciones.md)
+   3.  [Argumentos Por Defecto de Una Funcion](Argumentos-Por-Defecto-de-Una-Funcion.txt)
 
 # LISTA DE EJERCICIOS
 
