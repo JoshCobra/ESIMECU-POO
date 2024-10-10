@@ -2,6 +2,12 @@ Clase Simple (calse-simple.cpp)
 Objetivo: Introducir los conceptos básicos de clases en C++.
 
 Pasos:
-- Define una clase simple que contenga atributos privados y métodos públicos para acceder a ellos.
-- Implementa un constructor que inicialice los valores de la clase.
-- En el main, instancia la clase y muestra los valores utilizando los métodos públicos.
+
+Define una clase simple que contenga atributos privados y métodos públicos para acceder a ellos.
+Implementa un constructor que inicialice los valores de la clase.
+En el main, instancia la clase y muestra los valores utilizando los métodos públicos.
+
+Resultado esperado: El programa debe crear un objeto de la clase y mostrar los valores inicializados. 
+
+Ejemplo:
+Valor inicial: 10
