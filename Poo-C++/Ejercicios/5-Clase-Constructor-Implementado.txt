@@ -1,0 +1,7 @@
+Clase Constructor Implementado (clase-constructor-implementado.cpp)
+Objetivo: Entender el uso de constructores en clases.
+
+Pasos:
+Define una clase con un constructor que inicialice los atributos de la clase.
+Implementa métodos que modifiquen y muestren los atributos de la clase.
+En el main, crea instancias de la clase para ver cómo se inicializan los objetos.
