@@ -6,29 +6,30 @@
 
 # LISTA DE EJERCICIOS
 
-### 1. Nivel Básico: Introducción a Clases y Objetos
-   - Clase Simple (calse-simple.cpp)
-   - Clases - Parte 1 (Clases-P1.cpp)
-   - Clase Punto (Class Punto.cpp)
-   - Clases - Parte 2 (Clases-P2.cpp)
-   - Clase Constructor Implementado (clase-constructor-implementado.cpp)
+### Nivel Básico: Introducción a Clases y Objetos
+1. Clase Simple (calse-simple.cpp)
+2. Clases - Parte 1 (Clases-P1.cpp)
+3. Clase Punto (Class Punto.cpp)
+4. Clases - Parte 2 (Clases-P2.cpp)
+5. Clase Constructor Implementado (clase-constructor-implementado.cpp)
      
-### 2. Nivel Intermedio: Interacción entre Clases y Estructuras Básicas
-   - Clase A y B (Class-A-y-B.cpp)
-   - Clase Artículo: Arreglo de Objetos (Class-Articulo-arreglo de objetos.cpp)
-   - Clase - Lista de Objetos (clase-ListadeObjetos.cpp)
-   - Clase Artículo - Menú (Class-articulo-menu.cpp)
-   - Alumno - Calificación (Alumno-Calificacion.cpp)
+### Nivel Intermedio: Interacción entre Clases y Estructuras Básicas
+   6. Clase A y B (Class-A-y-B.cpp)
+   7. Clase Artículo: Arreglo de Objetos (Class-Articulo-arreglo de objetos.cpp)
+   8. Clase - Lista de Objetos (clase-ListadeObjetos.cpp)
+   9. Clase Artículo - Menú (Class-articulo-menu.cpp)
+   10. Alumno - Calificación (Alumno-Calificacion.cpp)
      
-### 3. Nivel Intermedio-Alto: Manejo de Pilas y Estructuras Dinámicas
-   - Agregar a una Pila (Agregar-a-una-Pila.cpp)
+### Nivel Intermedio-Alto: Manejo de Pilas y Estructuras Dinámicas
+   11. Agregar a una Pila (Agregar-a-una-Pila.cpp)
+   12. Alumno - Clase (Alumno-Class.cpp)
      
-### 4. Nivel Avanzado: Manejo de Múltiples Clases y Herencia
-   - Alumno - Clase (Alumno-Class.cpp)
-   - Alfa, Beta y Gamma (alfa-beta-y-gamma.cpp)
-   - Nivel Avanzado-Alto: Simulación de Sistemas Complejos
-   - Cajero Automático (Cajero Automatico.cpp)
-   - Cajero ATM - Baja y Alta (ATM-baja-y-alta.cpp)
-   - Cajero ATM - Clase Cuenta (Cajero ATM class cuenta.cpp)
+### Nivel Avanzado: Manejo de Múltiples Clases y Herencia
+   13. Alfa, Beta y Gamma (alfa-beta-y-gamma.cpp)
+
+### Nivel Avanzado-Alto: Simulación de Sistemas Complejos
+   14. Cajero Automático (Cajero Automatico.cpp)
+   15. Cajero ATM - Baja y Alta (ATM-baja-y-alta.cpp)
+   16. Cajero ATM - Clase Cuenta (Cajero ATM class cuenta.cpp)
 
    
