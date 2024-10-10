@@ -1,8 +1,8 @@
 ### Para apoyarte a resolver los ejercicios checa:
 - [Documentos](Documentos)
-   - [Sintaxis Basica](Poo-C++/Documentos/Sintaxis-Basica.md)
-   - [Sobrecarga de Funciones](Poo-C++/Documentos/Sobrecarga-de-Funciones.md)
-   - [Argumentos Por Defecto de Una Funcion](Poo-C++/Documentos/Argumentos-Por-Defecto-de-Una-Funcion.txt)
+   - [Sintaxis Basica](Sintaxis-Basica.md)
+   - [Sobrecarga de Funciones](Sobrecarga-de-Funciones.md)
+   - [Argumentos Por Defecto de Una Funcion](Argumentos-Por-Defecto-de-Una-Funcion.txt)
 
 # LISTA DE EJERCICIOS
 
