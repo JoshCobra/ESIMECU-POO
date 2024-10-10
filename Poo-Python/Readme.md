@@ -1,6 +1,6 @@
 ### Para apoyarte a resolver los ejercicios checa:
 [DOCUMENTOS](Documentos)
- - [Tipos De Datos Y Operadores](Documentos/Tipos-de-datos-Primitivos-y-Operadores.txt)
+ - [Tipos De Datos Y Operadores](Documentos/Tipos-de-datos-Primitivos-y-Operadores.md)
  - [Variables Y Colecciones](Documentos/Variables-y-Colecciones.txt)
  - [Manejo De Cadenas De Texto](Documentos/Manejo-Cadenas-de-Texto.md)
  - [Metodos Aplicables a Cadenas](Documentos/Metodos-Aplicables-a-Cadenas.txt)
