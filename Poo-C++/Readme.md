@@ -1,6 +1,6 @@
 ### Para apoyarte a resolver los ejercicios checa:
 - [Documentos](Documentos)
-   - [Sintaxis Basica](/Documentos/Sintaxis-Basica.md)
+   - [Sintaxis Basica](Poo-C++/Documentos/Sintaxis-Basica.md)
    - [Sobrecarga de Funciones](Poo-C++/Documentos/Sobrecarga-de-Funciones.md)
    - [Argumentos Por Defecto de Una Funcion](Poo-C++/Documentos/Argumentos-Por-Defecto-de-Una-Funcion.txt)
 
