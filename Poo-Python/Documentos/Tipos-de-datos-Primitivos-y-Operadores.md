@@ -1,40 +1,64 @@
+# Introduccion a los Tipos de Datos Primitivos Y Operadores en Python
+
 Los comentarios de una sola línea empiezan con el símbolo "#".
 """ Las cadenas de texto de varias líneas se pueden escribir usando tres comillas dobles y se utilizan a menudo para documentación. """
 
-
-1. Tipos de Datos Primitivos y Operadores
-
-Puedes trabajar con números
+### Puedes trabajar con números
+```
 3 # => 3
+```
 
-Las operaciones matemáticas son lo que esperas
-1 + 1 # => 2 8 - 1 # => 7 10 * 2 # => 20 35 / 5 # => 7.0
+### Las operaciones matemáticas son lo que esperas
+```
+1 + 1 # => 2
+8 - 1 # => 7
+10 * 2 # => 20
+35 / 5 # => 7.0
+```
 
-La división entera redondea hacia abajo (infinito negativo)
-5 // 3 # => 1 -5 // 3 # => -2 5.0 // 3.0 # => 1.0 # también funciona con decimales -5.0 // 3.0 # => -2.0
+### La división entera redondea hacia abajo (infinito negativo)
+```
+5 // 3 # => 1
+-5 // 3 # => -2
+5.0 // 3.0 # => 1.0
+# también funciona con decimales -5.0 // 3.0 # => -2.0
+```
 
-El resultado de la división siempre es un número decimal
+### El resultado de la división siempre es un número decimal
+```
 10.0 / 3 # => 3.3333333333333335
-
-Operación de módulo (resto de la división)
+```
+### Operación de módulo (resto de la división)
+```
 7 % 3 # => 1
-
-i % j tiene el mismo signo que j, a diferencia de otros lenguajes como C
+```
+### `i % j` tiene el mismo signo que `j`, a diferencia de otros lenguajes como C
+```
 -7 % 3 # => 2
+```
 
-Exponentes (x**y, x elevado a la potencia de y)
+### Exponentes ("x**y", x elevado a la potencia de y)
+```
 2**3 # => 8
+```
+### Puedes usar paréntesis para cambiar el orden de las operaciones
+```
+1 + 3 * 2 # => 7
+(1 + 3) * 2 # => 8
+```
 
-Puedes usar paréntesis para cambiar el orden de las operaciones
-1 + 3 * 2 # => 7 (1 + 3) * 2 # => 8
+### Los valores booleanos (verdadero/falso) son tipos de datos básicos
+```
+True # => True
+False # => False
+```
+### Se niegan con "not"
+```
+not True # => False
+not False # => True
+```
 
-Los valores booleanos (verdadero/falso) son tipos de datos básicos
-True # => True False # => False
-
-Se niegan con "not"
-not True # => False not False # => True
-
-Operadores lógicos
+# Operadores lógicos
 Nota: "and" y "or" son sensibles a mayúsculas
 True and False # => False False or True # => True
 
