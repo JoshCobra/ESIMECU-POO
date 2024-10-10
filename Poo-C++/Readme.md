@@ -1,3 +1,8 @@
+### Para apoyarte a resolver los ejercicios checa:
+- [Sintaxis Basica](Sintaxis-Basica.md)
+- [Sobrecarga de Funciones](Sobrecarga-de-Funciones.md)
+- [Argumentos Por Defecto de Una Funcion](Argumentos-Por-Defecto-de-Una-Funcion.txt)
+
 # LISTA DE EJERCICIOS
 
 1. Realizar un programa con dos funciones, agregar pila y mostrar pila, el usuario decide que dato entero se agregan a la pila y pregunta si desea agregar otro dato
