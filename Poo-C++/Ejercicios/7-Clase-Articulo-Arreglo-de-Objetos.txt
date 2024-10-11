@@ -1,0 +1,14 @@
+Clase Artículo: Arreglo de Objetos (Class-Articulo-arreglo de objetos.cpp)
+Objetivo: Gestionar una lista de objetos de tipo Artículo.
+
+Pasos:
+
+Define la clase Artículo con atributos como nombre y precio.
+Crea un arreglo de objetos Artículo dentro de otra clase que gestione la lista.
+Implementa métodos para agregar artículos y mostrar la lista completa.
+Resultado esperado: El programa debe permitir gestionar una lista de artículos, agregando y mostrando su información. 
+
+Ejemplo:
+Artículo agregado: Lápiz, precio: 10
+Lista de artículos: 
+Lápiz - 10
