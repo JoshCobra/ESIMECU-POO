@@ -1,0 +1,13 @@
+Clase A y B (Class-A-y-B.cpp)
+Objetivo: Implementar la interacción entre dos clases.
+
+Pasos:
+
+Crea dos clases A y B. La clase B debe tener una relación con la clase A.
+Implementa métodos en ambas clases para interactuar y compartir datos.
+En el main, instancia ambos objetos y muestra cómo interactúan entre sí.
+Resultado esperado: El programa debe demostrar cómo las clases interactúan y comparten información. 
+
+Ejemplo:
+Clase A con valor: 10
+Clase B utilizando valor de A: 10
