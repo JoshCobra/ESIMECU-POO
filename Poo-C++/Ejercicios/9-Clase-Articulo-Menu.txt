@@ -1,0 +1,15 @@
+Clase Artículo - Menú (Class-articulo-menu.cpp)
+Objetivo: Crear un menú para gestionar artículos.
+
+Pasos:
+
+Crea una clase Artículo con atributos como nombre y precio.
+Implementa un menú que permita al usuario agregar, modificar y eliminar artículos.
+Añade funciones para mostrar la lista completa de artículos en el menú.
+
+Resultado esperado: El usuario podrá gestionar la lista de artículos a través de un menú interactivo. 
+
+Ejemplo:
+1. Agregar artículo
+2. Mostrar artículos
+3. Eliminar artículo
