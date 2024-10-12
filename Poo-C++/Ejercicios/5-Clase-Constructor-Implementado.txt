@@ -6,6 +6,7 @@ Pasos:
 Define una clase con un constructor que inicialice los atributos automáticamente.
 Implementa métodos para mostrar los valores de los atributos.
 En el main, crea objetos y muestra cómo el constructor inicializa los valores.
+
 Resultado esperado: Se debe mostrar cómo los atributos son inicializados automáticamente por el constructor. 
 
 Ejemplo:
