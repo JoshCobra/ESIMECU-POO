@@ -1,0 +1,15 @@
+Clase - Lista de Objetos (clase-ListadeObjetos.cpp)
+Objetivo: Trabajar con arreglos de objetos en una clase.
+
+Pasos:
+
+Define una clase Objeto con atributos como nombre y cantidad.
+Crea un arreglo de objetos dentro de otra clase para gestionarlos.
+Implementa métodos para agregar y mostrar objetos del arreglo.
+
+Resultado esperado: El programa debe permitir agregar objetos al arreglo y luego mostrarlos. 
+
+Ejemplo:
+Ingrese nombre del objeto: Lápiz
+Objeto agregado.
+Lista de objetos: Lápiz
