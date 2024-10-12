@@ -1,0 +1,15 @@
+Agregar a una Pila (Agregar-a-una-Pila.cpp)
+Objetivo: Implementar una pila dinámica utilizando punteros y nodos.
+
+Pasos:
+
+Define una estructura Nodo que contenga un valor entero y un puntero al siguiente nodo.
+Crea funciones para agregar un valor a la pila y mostrar todos los valores.
+En el main, permite al usuario agregar valores a la pila y luego mostrarlos en orden inverso.
+
+Resultado esperado: El programa debe permitir ingresar valores en la pila y mostrarlos en el orden inverso al ingresado. 
+
+Ejemplo:
+Ingrese un valor: 5
+Ingrese un valor: 10
+Valores en la pila: 10 5
