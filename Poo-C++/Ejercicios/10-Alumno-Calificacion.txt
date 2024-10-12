@@ -1,0 +1,15 @@
+Alumno - Calificación (Alumno-Calificacion.cpp)
+Objetivo: Implementar una clase para gestionar las calificaciones de un alumno.
+
+Pasos:
+
+Define una clase Alumno con atributos para el nombre, número de boleta y calificaciones.
+Implementa métodos para calcular el promedio de las calificaciones y mostrar la información del alumno.
+En el main, permite al usuario ingresar las calificaciones del alumno y muestra el promedio final.
+
+Resultado esperado: El programa debe calcular y mostrar el promedio de las calificaciones ingresadas para el alumno.
+
+Ejemplo:
+Nombre: Juan
+Calificaciones: 90, 80, 85
+Promedio: 85
