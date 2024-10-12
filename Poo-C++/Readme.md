@@ -9,8 +9,8 @@
 ### Nivel Básico: Introducción a Clases y Objetos
 1. [Clase Simple](Ejercicios/1-Clase-Simple.txt)
 2. [Clases - Parte 1 ](Ejercicios/2-Clases-Parte1.txt)
-3. [Clase Punto ](Ejercicios/3-Clase-Punto.txt)
-4. [Clases - Parte 2 ](Ejercicios/4-Clases-Parte2.txt)
+3. [Clases - Parte 2 ](Ejercicios/4-Clases-Parte2.txt)
+4. [Clase Punto ](Ejercicios/3-Clase-Punto.txt)
 5. [Clase Constructor Implementado ](Ejercicios/5-Clase-Constructor-Implementado.txt)
      
 ### Nivel Intermedio: Interacción entre Clases y Estructuras Básicas
