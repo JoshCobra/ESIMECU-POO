@@ -14,22 +14,22 @@
 5. [Clase Constructor Implementado ](Ejercicios/5-Clase-Constructor-Implementado.txt)
      
 ### Nivel Intermedio: Interacción entre Clases y Estructuras Básicas
-   6. Clase A y B (Class-A-y-B.cpp)
-   7. Clase Artículo: Arreglo de Objetos (Class-Articulo-arreglo de objetos.cpp)
-   8. Clase - Lista de Objetos (clase-ListadeObjetos.cpp)
-   9. Clase Artículo - Menú (Class-articulo-menu.cpp)
-   10. Alumno - Calificación (Alumno-Calificacion.cpp)
+   6. [Clase A y B ](Ejercicios/6-Clase-A-y-B.txt)
+   7. [Clase Artículo: Arreglo de Objetos ](Ejercicios/6-Clase-A-y-B.txt)
+   8. [Clase - Lista de Objetos ](Ejercicios/8-Clase-Lista-de-Objetos.txt)
+   9. [Clase Artículo - Menú ](Ejercicios/9-Clase-Articulo-Menu.txt)
+   10. [Alumno - Calificación ](Ejercicios/10-Alumno-Calificacion.txt)
      
 ### Nivel Intermedio-Alto: Manejo de Pilas y Estructuras Dinámicas
-   11. Agregar a una Pila (Agregar-a-una-Pila.cpp)
-   12. Alumno - Clase (Alumno-Class.cpp)
+   11. [Agregar a una Pila ](Ejercicios/11-Agregar-a-una-Pila.txt)
+   12. [Alumno - Clase ](Ejercicios/12-Alumno-Clase.txt)
      
 ### Nivel Avanzado: Manejo de Múltiples Clases y Herencia
-   13. Alfa, Beta y Gamma (alfa-beta-y-gamma.cpp)
+   13. [Alfa, Beta y Gamma ](Ejercicios/13-Alfa-Beta-y-Gamma.txt)
 
 ### Nivel Avanzado-Alto: Simulación de Sistemas Complejos
-   14. Cajero Automático (Cajero Automatico.cpp)
-   15. Cajero ATM - Baja y Alta (ATM-baja-y-alta.cpp)
-   16. Cajero ATM - Clase Cuenta (Cajero ATM class cuenta.cpp)
+   14. [Cajero Automático ](Ejercicios/14-Cajero-Automatico.md)
+   15. [Cajero ATM - Baja y Alta ](Ejercicios/15-ATM-Baja-y-Alta.md)
+   16. [Cajero ATM - Clase Cuenta ](Ejercicios/16-ATM-Clase-Cuenta.md)
 
    
