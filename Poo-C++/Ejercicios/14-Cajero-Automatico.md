@@ -17,7 +17,7 @@ Muestra un menú con las siguientes opciones:
 Después de cada operación, vuelve a mostrar el menú hasta que el usuario elija salir.
 
 ### Resultado esperado:
-- El programa debe permitir que el usuario consulte su saldo, deposite o retire dinero, y luego mostrar el saldo actualizado. Ejemplo:
+El programa debe permitir que el usuario consulte su saldo, deposite o retire dinero, y luego mostrar el saldo actualizado. Ejemplo:
 
 ```
 Bienvenido al Cajero Automático
