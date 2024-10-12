@@ -1,0 +1,15 @@
+Alumno - Clase (Alumno-Class.cpp)
+Objetivo: Gestionar la información de varios alumnos utilizando clases.
+
+Pasos:
+
+Define una clase Alumno con atributos como nombre, grupo y calificaciones.
+Implementa métodos para agregar, modificar y eliminar información de alumnos.
+Crea un menú interactivo en el main para gestionar los registros de alumnos.
+
+Resultado esperado: El programa debe permitir gestionar la información de varios alumnos y mostrar la lista de ellos. 
+
+Ejemplo:
+Alumno agregado: Pedro
+Lista de alumnos:
+1. Pedro
