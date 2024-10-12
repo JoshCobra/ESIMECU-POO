@@ -1,0 +1,15 @@
+Alfa, Beta y Gamma (alfa-beta-gamma.cpp)
+Objetivo: Implementar una relación entre tres clases con dependencia jerárquica.
+
+Pasos:
+
+Define tres clases: Alfa, Beta, y Gamma, donde cada clase herede o dependa de la anterior.
+Implementa métodos en cada clase para interactuar con los atributos de la clase anterior.
+En el main, instancia las tres clases y demuestra cómo interactúan entre sí.
+
+Resultado esperado: El programa debe mostrar la interacción entre las tres clases, con Gamma utilizando los datos de Alfa y Beta. 
+
+Ejemplo:
+Valor de Alfa: 5
+Valor de Beta: 10
+Valor de Gamma: 15
