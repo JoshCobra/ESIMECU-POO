@@ -94,10 +94,6 @@ hacer_sonido_animal(perro)
 hacer_sonido_animal(gato)
 ```
 
-## Conclusión
-La programación orientada a objetos en Python permite crear código más modular, reutilizable y fácil de mantener. Comprender los conceptos básicos como clases, objetos, herencia, encapsulamiento y polimorfismo es fundamental para aprovechar al máximo este paradigma.
-
-
 ## Clase y Funciones Miembro
 
 ### Constructor de Clase y Objetos
@@ -176,3 +172,5 @@ recurso1 = Recurso("Archivo")
 del recurso1
 ```
 
+## Conclusión
+La programación orientada a objetos en Python permite crear código más modular, reutilizable y fácil de mantener. Comprender los conceptos básicos como clases, objetos, herencia, encapsulamiento y polimorfismo es fundamental para aprovechar al máximo este paradigma.

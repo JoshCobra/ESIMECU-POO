@@ -1,5 +1,6 @@
 ### Para apoyarte a resolver los ejercicios checa:
 [DOCUMENTOS](Documentos)
+ - [Que es Poo en Python](/Poo-Python/Python-POO.md)
  - [Tipos De Datos Y Operadores](Documentos/Tipos-de-datos-Primitivos-y-Operadores.md)
  - [Variables Y Colecciones](Documentos/Variables-y-Colecciones.txt)
  - [Manejo De Cadenas De Texto](Documentos/Manejo-Cadenas-de-Texto.md)
