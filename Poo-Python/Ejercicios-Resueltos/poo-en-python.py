@@ -22,12 +22,16 @@ a.saludar()
 class perro:
     def __init__(self, nombre, raza):
         print(f'Creando un perro llamado {nombre} de raza {raza}')
+        #Atributos de instancia
+        # self.nombre = nombre
+        self.nombre = nombre
+        self.raza = raza
+        # self.raza = raza
 
 mi_perro = perro('Firulais', 'Dalmata')
 print(type(mi_perro))
 mi_perro = perro('Boby', 'Pastor Aleman')
 
-#Atributos de instancia
-# self.nombre = nombre
-# self.raza = raza
+print(mi_perro.nombre)
+
 

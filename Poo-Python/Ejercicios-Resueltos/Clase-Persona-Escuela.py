@@ -10,4 +10,3 @@ class Escuela:
 
 persona1 = Persona('Juan', 25, 'Masculino', 'Mexicana')
 escuela1 = Escuela('IPN', 'Ingeniería', 'Sistemas')
-
