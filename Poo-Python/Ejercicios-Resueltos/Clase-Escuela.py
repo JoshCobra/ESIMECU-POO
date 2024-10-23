@@ -31,7 +31,7 @@ class Escuela:
     def presenta_escuela (self):
         print(f'La escuela {self.nombre} se encuentra en {self.direccion} y ofrece el curso de: {self.curso}. '
               f'El director de la escuela es {self.nombre_director} y tiene {self.numero_estudiantes} estudiantes. '
-              f'La escuela cerrará a las {self.hora}. La materia {self.materia} tiene una calificación de {self.calificacion}')
+              f'La materia {self.materia} tiene una calificación de {self.calificacion}')
         
 #---------------------------------------------
 
@@ -39,6 +39,5 @@ class Escuela:
 escuela1 = Escuela('Escuela Primaria', 'Calle 5 de Mayo', 'Matemáticas')
 escuela1.abrir()
 escuela1.limpiar()
-escuela1.cerrar('14:30')
 escuela1.calificar('Matemáticas', 10)
 escuela1.presenta_escuela()
