@@ -16,20 +16,15 @@ class Escuela:
     def abrir(self):
         print('La escuela está abierta')
 #---------------------------------------------
-#Función con vuelta de parámetros
-    def informacion(self):
-        print(f'La escuela {self.nombre} se encuentra en {self.direccion} y ofrece los siguientes cursos: {self.curso}')
-
-#---------------------------------------------
-#Funciones con paso de parámetros
-    def cerrar(self, hora):
-        self.hora = hora
-        print(f'La escuela cerrará a las {hora}')
-    
+#Funciones con paso y vuelta de parámetros
+#Función con paso de 2 parámetros
     def calificar (self, materia, calificacion):
         self.materia = materia
         self.calificacion = calificacion
         print(f'La materia {materia} tiene una calificación de {calificacion}')
+#Función con paso de 3 parámetros
+    def informacion(self):
+        print(f'La escuela {self.nombre} se encuentra en {self.direccion} y ofrece los siguientes cursos: {self.curso}')
 
 #---------------------------------------------
 #Función con paso de Todos los parámetros
