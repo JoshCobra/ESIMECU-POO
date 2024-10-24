@@ -6,3 +6,7 @@ Crea una clase “Persona”. Con atributos nombre y edad. Además, hay que crea
 
 ## Programa 3
 Realizar un programa en el cual se declaren dos valores enteros por teclado utilizando el método __init__. Calcular después la suma, resta, multiplicación y división. Utilizar un método para cada una e imprimir los resultados obtenidos. Llamar a la clase Calculadora.
+
+
+>[!NOTE]
+> Los datos deben ser ingresados por el usuario y deben ser cíclicos, es decir que pueda ingresar datos indefinidamente hasta que el usuario decida salir.
