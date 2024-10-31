@@ -1,0 +1,2 @@
+Desarrollar un programa con tres clases, la primera debe ser Universidad, con atributos nombre (Donde se almacena el nombre de la Universidad). La segunda llamada Carrera, con los atributos especialidad (En donde me guarda la especialidad de un estudiante). Y por último, una llamada Estudiante, que tenga como atributos su nombre y edad. El programa debe imprimir la especialidad, edad, nombre y universidad de dicho estudiante con un objeto llamado persona. 
+
