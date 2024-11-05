@@ -72,7 +72,6 @@ abeja.picar()
 abeja.moverse()
 mi_perro.moverse()
 
-
 abeja.decir_especie()
 mi_perro.decir_especie()
 vaca.decir_especie()
