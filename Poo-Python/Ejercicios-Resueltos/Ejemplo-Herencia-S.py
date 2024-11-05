@@ -61,13 +61,16 @@ abeja = Abeja('insecto',1)
 vaca = Vaca("mamifero",2)
 
 mi_perro.describe() #Puede acceder al método describe() por la herencia hacia la clase Animal
-mi_perro.hablar()
-vaca.hablar()
-abeja.picar()
-abeja.moverse()
-mi_perro.moverse()
 vaca.describe()
 abeja.describe()
+
+mi_perro.hablar()
+vaca.hablar()
+
+abeja.picar()
+
+abeja.moverse()
+mi_perro.moverse()
 
 
 abeja.decir_especie()
