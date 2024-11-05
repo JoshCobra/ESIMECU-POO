@@ -8,6 +8,9 @@ class Perro(Animal):
     animal"""
     pass
 
+class Gato(Animal):
+    pass
+
 print(Perro.__bases__) #Que tipo de clase es la Padre
 print(Animal.__subclasses__()) #Que subclases tiene la clase Animal
 
