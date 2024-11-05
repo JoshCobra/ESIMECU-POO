@@ -3,7 +3,6 @@
 class Animal:
     pass
 
-
 class Perro(Animal):
     """La clase Perro recibirá los atributos de la clase
     animal"""
@@ -24,14 +23,13 @@ class Animal:
 
     def hablar(self):
         pass
-
+    #Clases vacías para sobre-escribirlas en las clases hijas
     def decir_especie(self):
          print(f'Especie de {type(self).__name__} es {self.especie}')
-    #Clases vacías para sobre-escribirlas en las clases hijas
+     # Método para imprimir la especie de la clase hija
     def describe(self):
         print(f"Soy un Animal de tipo: {type(self).__name__}")
-
-
+     # Método para imprimir el tipo de la clase hija
 
 class Perro(Animal):
         def hablar(self):
@@ -40,14 +38,12 @@ class Perro(Animal):
         def moverse(self):
              print("Caminando en 4 patas")
 
-
 class Vaca(Animal):
         def hablar(self):
              print("Muuu!")
 
         def moverse(self):
              print("Caminando en 4 patas")
-
 
 class Abeja(Animal):
         def hablar(self):
