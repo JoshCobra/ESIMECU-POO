@@ -70,22 +70,22 @@ class Administrativo(Persona, Escuela):
         print(f"{self.nombre_persona} ahora tiene el puesto de: {nuevo_puesto}")
 
 
-escuela = Escuela("Escuela Primaria")
-persona = Persona("Escuela Primaria", "Juan", 30)
-estudiante = Estudiante("Escuela Primaria", "Ana", 10, "5to Grado")
-profesor = Profesor("Escuela Primaria", "Carlos", 40, "Matemáticas")
-administrativo = Administrativo("Escuela Primaria", "Laura", 35, "Secretaria")
+escuela = Escuela("ESIME Culhuacan")
+persona = Persona("ESIME Culhuacan", "Juan", 21)
+estudiante = Estudiante("ESIME Culhuacan", "Ana", 19, "Mecánica")
+profesor = Profesor("ESIME Culhuacan", "Carlos", 40, "POO")
+administrativo = Administrativo("ESIME Culhuacan", "Laura", 35, "Secretaria")
 
 escuela.mostrar_escuela()
 
 persona.mostrar_persona()
-persona.cambiar_edad(21)
+persona.cambiar_edad(22)
 
 estudiante.mostrar_estudiante()
-estudiante.cambio_de_carrera("6to Grado")
+estudiante.cambio_de_carrera("Computación")
 
 profesor.mostrar_profesor()
-profesor.asignar_materia("Ciencias")
+profesor.asignar_materia("Proyecto de Ingeniería")
 
 administrativo.mostrar_administrativo()
 administrativo.asignar_tarea("Organizar archivos")
