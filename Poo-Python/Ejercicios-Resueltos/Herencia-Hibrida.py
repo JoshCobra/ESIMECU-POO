@@ -34,7 +34,7 @@ class Estudiante(Persona):
 
     def mostrar_estudiante(self):
         self.mostrar_persona()
-        print(f"Estudia la Carrera: {self.carrera}")
+        print(f"{self.nombre_persona} Estudia la Carrera: {self.carrera}")
     
     def cambio_de_carrera(self, nueva_carrera):
         self.carrera = nueva_carrera
@@ -63,7 +63,7 @@ class Administrativo(Persona, Escuela):
         print(f"Puesto: {self.puesto}")
 
     def asignar_tarea(self, tarea):
-        print(f"{self.nombre_persona} ha sido asignado a la tarea: {tarea}")
+        print(f"{self.nombre_persona} esta haciendo: {tarea}")
 
     def cambiar_puesto(self, nuevo_puesto):
         self.puesto = nuevo_puesto
