@@ -7,7 +7,7 @@ class Escuela:
     def mostrar_escuela(self):
         print(f"Escuela: {self.nombre_escuela}")
 
-    def abir_escuela(self):
+    def abrir_escuela(self):
         print('Se abrió la Escuela')
 
     def cerrar_escuela(self):
@@ -77,6 +77,8 @@ profesor = Profesor("ESIME Culhuacan", "Carlos", 40, "POO")
 administrativo = Administrativo("ESIME Culhuacan", "Laura", 35, "Secretaria")
 
 escuela.mostrar_escuela()
+escuela.abrir_escuela()
+escuela.cerrar_escuela()
 
 persona.mostrar_persona()
 persona.cambiar_edad(22)
