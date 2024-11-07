@@ -7,6 +7,12 @@ class Escuela:
     def mostrar_escuela(self):
         print(f"Escuela: {self.nombre_escuela}")
 
+    def abir_escuela(self):
+        print('Se abrió la Escuela')
+
+    def cerrar_escuela(self):
+        print('La escuela se Cerro')
+
 class Persona(Escuela):
     def __init__(self, nombre_escuela, nombre_persona, edad):
         Escuela.__init__(self, nombre_escuela)
@@ -22,17 +28,17 @@ class Persona(Escuela):
         print(f"{self.nombre_persona} ahora tiene {nueva_edad} años")
 
 class Estudiante(Persona):
-    def __init__(self, nombre_escuela, nombre_persona, edad, grado):
+    def __init__(self, nombre_escuela, nombre_persona, edad, carrera):
         Persona.__init__(self, nombre_escuela, nombre_persona, edad)
-        self.grado = grado
+        self.carrera = carrera
 
     def mostrar_estudiante(self):
         self.mostrar_persona()
-        print(f"Grado: {self.grado}")
+        print(f"Estudia la Carrera: {self.carrera}")
     
-    def cambiar_grado(self, nuevo_grado):
-        self.grado = nuevo_grado
-        print(f"{self.nombre_persona} ahora está en el grado: {nuevo_grado}")
+    def cambio_de_carrera(self, nueva_carrera):
+        self.carrera = nueva_carrera
+        print(f"{self.nombre_persona} ahora está en la carrera de: {nueva_carrera}")
 
 class Profesor(Persona):
     def __init__(self, nombre_escuela, nombre_persona, edad, materia):
@@ -41,7 +47,7 @@ class Profesor(Persona):
 
     def mostrar_profesor(self):
         self.mostrar_persona()
-        print(f"Materia: {self.materia}")
+        print(f"Da la Materia: {self.materia}")
     
     def asignar_materia(self, nueva_materia):
         self.materia = nueva_materia
@@ -70,15 +76,21 @@ estudiante = Estudiante("Escuela Primaria", "Ana", 10, "5to Grado")
 profesor = Profesor("Escuela Primaria", "Carlos", 40, "Matemáticas")
 administrativo = Administrativo("Escuela Primaria", "Laura", 35, "Secretaria")
 
+escuela.mostrar_escuela()
+
+persona.mostrar_persona()
+persona.cambiar_edad(21)
+
+estudiante.mostrar_estudiante()
+estudiante.cambio_de_carrera("6to Grado")
+
+profesor.mostrar_profesor()
+profesor.asignar_materia("Ciencias")
+
 administrativo.mostrar_administrativo()
 administrativo.asignar_tarea("Organizar archivos")
 administrativo.cambiar_puesto("Jefa de Personal")
-escuela.mostrar_escuela()
-persona.mostrar_persona()
-estudiante.mostrar_estudiante()
-profesor.mostrar_profesor()
-profesor.asignar_materia("Ciencias")
-estudiante.cambiar_grado("6to Grado")
-persona.cambiar_edad(31)
+
+
 
 
