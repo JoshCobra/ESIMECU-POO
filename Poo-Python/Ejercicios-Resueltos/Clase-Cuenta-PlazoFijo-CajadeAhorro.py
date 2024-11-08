@@ -28,6 +28,7 @@ class PlazoFijo(Cuenta):
         # Provee una forma de acceder métodos y atributos de una clase padre (superclase).
         # Es util para modificar el comportamiento de la clase padre manteniendo aun, parte de su funcionalidad
         # super() devuelve un objeto temporal de la (superclase) que permite llamar a sus métodos 
+        # Muy util en herencia multiple
         self.plazo = plazo
         self.interes = interes
 
