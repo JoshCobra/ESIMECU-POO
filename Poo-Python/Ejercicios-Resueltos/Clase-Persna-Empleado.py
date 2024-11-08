@@ -12,15 +12,16 @@ class Persona:
         print(f'Nombre: {self.nombre} Edad: {self.edad}')
 
 class Empleado(Persona):
-    def __init__(self, nombre, edad, sueldo):
-        Persona.__init__(nombre, edad)
-        self.sueldo = sueldo
+    def __init__(self):
+        Persona.__init__(self)
+        self.sueldo = int(input('Introduce tu sueldo: '))
 
     def pagar_impuestos(self):
         if 3000 > self.sueldo:
-            print(f'No debe pagar Impuestos')
+            print(f'{type(self).__name__} {self.nombre} No debe pagar Impuestos')
         else: 
-            print(f'Pagara Impuestos')
-
-persona1 = Persona()
-persona1.presentarse()
+            print(f'{type(self).__name__} {self.nombre} Pagara Impuestos')
+    
+empleado1 = Empleado()
+empleado1.presentarse()
+empleado1.pagar_impuestos()
