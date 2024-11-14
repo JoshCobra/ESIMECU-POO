@@ -192,9 +192,11 @@ class Contador:
         # Sobrecarga del operador +=
         # Sumar el valor de la variable a la izquierda del 
         # operador con el valor de la variable a la derecha
-
         self.valor += otro.valor
-        return self
+        return self 
+        # return self por que devuelve el objeto modificado
+        # al devolver self te aseguras que la instancia 
+        # modificada sea devuelta 
 
     def __isub__(self, otro):
         # Sobrecarga del operador -=
@@ -229,3 +231,37 @@ print(contador1)  # Muestra: Contador con valor 50
 
 contador1 /= contador2
 print(contador1)  # Muestra: Contador con valor 10.0
+
+
+# Sobrecarga de operadores booleanos
+class Luz:
+    def __init__(self, estado):
+        self.estado = estado  # True para encendido, False para apagado
+
+    def __and__(self, otro):
+        # Sobrecarga del operador AND
+        return Luz(self.estado and otro.estado)
+
+    def __or__(self, otro):
+        # Sobrecarga del operador OR
+        return Luz(self.estado or otro.estado)
+
+    def __invert__(self):
+        # Sobrecarga del operador NOT
+        return Luz(not self.estado)
+
+    def __str__(self):
+        return "Encendido" if self.estado else "Apagado"
+
+# Ejemplo de uso
+luz1 = Luz(True)
+luz2 = Luz(False)
+
+luz3 = luz1 & luz2
+print(luz3)  # Muestra: Apagado
+
+luz4 = luz1 | luz2
+print(luz4)  # Muestra: Encendido
+
+luz5 = ~luz1
+print(luz5)  # Muestra: Apagado
