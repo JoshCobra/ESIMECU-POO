@@ -111,6 +111,7 @@ c = "hola"
 d = " ESIME"
 print(c+d)
 
+#Ejemplo 1
 class Estudiantes:
     def __init__(self, numero):
         self.numero = numero # numero de estudiantes
@@ -119,6 +120,9 @@ Escuela_1 = Estudiantes(213)
 Escuela_2 = Estudiantes(500)
 
 print(Escuela_1+Escuela_2)
+
+
+#Ejemplo 2
 
 class Contenedor:
     def __init__(self, litros):
