@@ -132,6 +132,7 @@ class Contenedor:
 
     def __add__(self, otro):
         return self.litros + otro.litros
+        # Por que return y no print? por que estamos devolviendo parámetros
     
 c1 = Contenedor(45)
 c2 = Contenedor(10)
@@ -144,6 +145,9 @@ class Libro:
     
     def __add__(self, otro):
         return Libro(self.paginas + otro.paginas)
+
+    def __str__(self):
+        return f"Libro con {self.paginas} páginas"
 
 libro1 = Libro(300)
 libro2 = Libro(250)
