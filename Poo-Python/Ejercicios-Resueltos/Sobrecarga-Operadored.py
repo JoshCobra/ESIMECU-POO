@@ -112,7 +112,7 @@ d = " ESIME"
 print(c+d)
 
 '''
-#Ejemplo 1 No funciona
+#Ejemplo 1 No funciona ese es su propósito 
 class Estudiantes:
     def __init__(self, numero):
         self.numero = numero # numero de estudiantes
@@ -147,10 +147,16 @@ class Libro:
         return Libro(self.paginas + otro.paginas)
 
     def __str__(self):
+        # Indica a la clase que la salida va a ser un string con el 
+        # siguiente formato
         return f"Libro con {self.paginas} páginas"
+        # Definir una representación en forma de cadena de un objeto.
 
 libro1 = Libro(300)
 libro2 = Libro(250)
 
 libro3 = (libro1.paginas + libro2.paginas)
 print(libro3)
+
+print(libro1.__str__())
+# Ejemplo de __str__
