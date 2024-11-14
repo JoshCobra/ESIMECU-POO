@@ -83,3 +83,50 @@ n1 = Numero(10)
 n2 = Numero(20)
 suma = n1 + n2
 print(suma.valor)  # Muestra: 30
+
+
+class Complejo:
+    def __init__(self, real, imag):
+        # z = (a + bi)
+        self.real = real # a
+        self.imag = imag # bi
+
+    def __add__(self, otro):
+        # Común definir "otro" para representar el otro objeto que esta siendo operado
+        return Complejo(self.real + otro.real, self.imag + otro.imag)
+
+c1 = Complejo(2, 3)
+c2 = Complejo(4, 5)
+c3 = c1 + c2
+print(f'Nuevo Complejo es: {c3.real, c3.imag}')
+# Complejo: (6, 8)
+
+##################################################
+
+a = 12
+b = 8
+print(a+b)
+
+c = "hola"
+d = " ESIME"
+print(c+d)
+
+class Estudiantes:
+    def __init__(self, numero):
+        self.numero = numero # numero de estudiantes
+
+Escuela_1 = Estudiantes(213)
+Escuela_2 = Estudiantes(500)
+
+print(Escuela_1+Escuela_2)
+
+class Contenedor:
+    def __init__(self, litros):
+        self.litros = litros
+
+    def __add__(self, otro):
+        return self.litros + otro.litros
+    
+c1 = Contenedor(45)
+c2 = Contenedor(10)
+print (c1+c2)
