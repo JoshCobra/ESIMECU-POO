@@ -111,7 +111,7 @@ c = "hola"
 d = " ESIME"
 print(c+d)
 
-#Ejemplo 1
+#Ejemplo 1 No funciona
 class Estudiantes:
     def __init__(self, numero):
         self.numero = numero # numero de estudiantes
@@ -122,7 +122,7 @@ Escuela_2 = Estudiantes(500)
 print(Escuela_1+Escuela_2)
 
 
-#Ejemplo 2
+#Ejemplo 2 Funcionando
 
 class Contenedor:
     def __init__(self, litros):
