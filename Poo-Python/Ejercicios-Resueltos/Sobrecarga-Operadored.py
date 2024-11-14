@@ -18,25 +18,7 @@ p3 = p1 + p2
 
 print(f'Esta es la salida de el objeto P3: {p3}')  
 # Salida: (4, 6)
-
-
-class Punto2:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def __add__(self, otro):
-        return Punto2(self.x + otro.x, self.y + otro.y)
-
-    def __str__(self):
-        return f"({self.x}, {self.y})"
-
-# Ejemplo de uso
-p3 = Punto2(1, 2)
-p4 = Punto2(3, 4)
-p5 = p1 + p2
-
-print(f'Esta es la salida de el objeto P3: {p3}')  
+ 
 
 # El método __init__ :
 
@@ -160,3 +142,42 @@ print(libro3)
 
 print(libro1.__str__())
 # Ejemplo de __str__
+
+
+# Sobrecarga de operadores de comparación
+# Operadores de comparación nos devuelven un booleano
+
+class Persona:
+    def __init__(self, nombre, edad):
+        #Constructor
+        self.nombre = nombre
+        self.edad = edad
+
+    def __eq__(self, otro):
+        # Definimos el comportamiento del Operador de igualdad (==)
+        return self.edad == otro.edad
+
+    def __lt__(self, otro):
+        # Definimos el comportamiento del Operador menor que (<)
+        # lt significa (less than) o (menor que)
+        # __gt__ (grater than) o (mayor que) Operador (>)
+        return self.edad < otro.edad
+
+    def __le__(self, otro):
+        # Operador menor o igual que (<=)
+        # __le__ (less equal) o (menor o igual)
+        # __ge__ (grater equal) o (mayor o igual) (>=)
+        return self.edad <= otro.edad
+
+    def __str__(self):
+        return f"{self.nombre}, {self.edad} años"
+
+# Ejemplo de uso
+persona1 = Persona("Ana", 30)
+persona2 = Persona("Luis", 25)
+persona3 = Persona("Ana", 30)
+
+print(persona1 == persona2)  # Muestra: False
+print(persona1 == persona3)  # Muestra: True
+print(persona1 < persona2)   # Muestra: False
+print(persona1 <= persona3)  # Muestra: True
