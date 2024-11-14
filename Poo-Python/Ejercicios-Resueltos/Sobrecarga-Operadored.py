@@ -181,3 +181,51 @@ print(persona1 == persona2)  # Muestra: False
 print(persona1 == persona3)  # Muestra: True
 print(persona1 < persona2)   # Muestra: False
 print(persona1 <= persona3)  # Muestra: True
+
+
+# Sobrecarga de operadores de asignación
+class Contador:
+    def __init__(self, valor=0):
+        self.valor = valor
+
+    def __iadd__(self, otro):
+        # Sobrecarga del operador +=
+        # Sumar el valor de la variable a la izquierda del 
+        # operador con el valor de la variable a la derecha
+
+        self.valor += otro.valor
+        return self
+
+    def __isub__(self, otro):
+        # Sobrecarga del operador -=
+        self.valor -= otro.valor
+        return self
+
+    def __imul__(self, otro):
+        # Sobrecarga del operador *=
+        self.valor *= otro.valor
+        return self
+
+    def __itruediv__(self, otro):
+        # Sobrecarga del operador /=
+        self.valor /= otro.valor
+        return self
+
+    def __str__(self):
+        return f"Contador con valor {self.valor}"
+
+# Ejemplo de uso
+contador1 = Contador(10)
+contador2 = Contador(5)
+
+contador1 += contador2
+print(contador1)  # Muestra: Contador con valor 15
+
+contador1 -= contador2
+print(contador1)  # Muestra: Contador con valor 10
+
+contador1 *= contador2
+print(contador1)  # Muestra: Contador con valor 50
+
+contador1 /= contador2
+print(contador1)  # Muestra: Contador con valor 10.0
