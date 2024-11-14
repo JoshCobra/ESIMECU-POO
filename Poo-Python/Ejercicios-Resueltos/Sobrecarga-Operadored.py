@@ -111,6 +111,7 @@ c = "hola"
 d = " ESIME"
 print(c+d)
 
+'''
 #Ejemplo 1 No funciona
 class Estudiantes:
     def __init__(self, numero):
@@ -120,6 +121,7 @@ Escuela_1 = Estudiantes(213)
 Escuela_2 = Estudiantes(500)
 
 print(Escuela_1+Escuela_2)
+'''
 
 
 #Ejemplo 2 Funcionando
@@ -134,3 +136,17 @@ class Contenedor:
 c1 = Contenedor(45)
 c2 = Contenedor(10)
 print (c1+c2)
+
+
+class Libro:
+    def __init__(self, paginas):
+        self.paginas = paginas
+    
+    def __add__(self, otro):
+        return Libro(self.paginas + otro.paginas)
+
+libro1 = Libro(300)
+libro2 = Libro(250)
+
+libro3 = (libro1.paginas + libro2.paginas)
+print(libro3)
