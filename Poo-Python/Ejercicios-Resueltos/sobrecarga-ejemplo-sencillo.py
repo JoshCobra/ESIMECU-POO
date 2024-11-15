@@ -15,7 +15,6 @@ class libro:
     def __add__(self, otro):
         return self.paginas + otro.paginas
 
-
     
 a1 = libro(500)
 a2 = libro(300)
