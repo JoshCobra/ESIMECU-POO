@@ -93,7 +93,7 @@ c = "hola"
 d = " ESIME"
 print(c+d)
 
-'''
+
 #Ejemplo 1 No funciona ese es su propósito 
 class Estudiantes:
     def __init__(self, numero):
@@ -103,7 +103,7 @@ Escuela_1 = Estudiantes(213)
 Escuela_2 = Estudiantes(500)
 
 print(Escuela_1+Escuela_2)
-'''
+
 
 
 #Ejemplo 2 Funcionando
@@ -174,10 +174,10 @@ class Persona:
 
 # Ejemplo de uso
 persona1 = Persona("Ana", 30)
-persona2 = Persona("Luis", 25)
+persona2 = Persona("Luis", 20)
 persona3 = Persona("Ana", 30)
 
-print(persona1 == persona2)  # Muestra: False
+print(persona1 == persona2)  # Muestra: False 
 print(persona1 == persona3)  # Muestra: True
 print(persona1 < persona2)   # Muestra: False
 print(persona1 <= persona3)  # Muestra: True
