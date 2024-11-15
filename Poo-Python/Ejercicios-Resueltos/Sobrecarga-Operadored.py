@@ -265,3 +265,44 @@ print(luz4)  # Muestra: Encendido
 
 luz5 = ~luz1
 print(luz5)  # Muestra: Apagado
+
+# Sobrecarga de operadores aritméticos
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, otro):
+        # Sobrecarga del operador +
+        return Vector(self.x + otro.x, self.y + otro.y)
+
+    def __sub__(self, otro):
+        # Sobrecarga del operador -
+        return Vector(self.x - otro.x, self.y - otro.y)
+
+    def __mul__(self, otro):
+        # Sobrecarga del operador *
+        return Vector(self.x * otro.x, self.y * otro.y)
+
+    def __truediv__(self, otro):
+        # Sobrecarga del operador /
+        return Vector(self.x / otro.x, self.y / otro.y)
+
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+
+# Ejemplo de uso
+v1 = Vector(2, 3)
+v2 = Vector(4, 5)
+
+v3 = v1 + v2
+print(v3)  # Muestra: Vector(6, 8)
+
+v4 = v1 - v2
+print(v4)  # Muestra: Vector(-2, -2)
+
+v5 = v1 * v2
+print(v5)  # Muestra: Vector(8, 15)
+
+v6 = v1 / v2
+print(v6)  # Muestra: Vector(0.5, 0.6)
