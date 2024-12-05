@@ -30,9 +30,6 @@ class Bandeja:
         self.refrigerada = refrigerada
         self.productos = [] #Array de productos en la bandeja
 
-    def mostrar_productos(self):
-        print(f"Productos que hay en la bandeja {self.productos}")
-
     def agregar_producto(self, producto):
         return self.productos.append(producto)
     
@@ -40,9 +37,12 @@ class Bandeja:
         # Para retirar un producto
         pass
 
+
 bandeja_snacks = Bandeja(10)
 bandeja_snacks.agregar_producto(sabritas)
-bandeja_snacks.mostrar_productos()
+
+bandeja_sodas = Bandeja(5, True)
+bandeja_sodas.agregar_producto(cocacola)
 
 
 class MaquinaExpendedora:
@@ -51,13 +51,15 @@ class MaquinaExpendedora:
         self.cambio_disponible = cambio_disponible
     
     def mostrar_productos(self):
-        # Lógica para listar productos disponibles
+        # Para listar productos disponibles
         pass
     
     def insertar_dinero(self, cantidad):
-        # Lógica para aceptar dinero
+        # Para aceptar dinero
         pass
     
     def seleccionar_producto(self, codigo_bandeja, nombre_producto):
-        # Lógica para seleccionar y dispensar un producto
+        # Para seleccionar y dispensar un producto
         pass
+
+maquina = MaquinaExpendedora(bandejas=[bandeja_snacks, bandeja_sodas], cambio_disponible=50)
