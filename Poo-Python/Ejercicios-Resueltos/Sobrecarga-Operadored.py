@@ -258,6 +258,7 @@ luz1 = Luz(True)
 luz2 = Luz(False)
 
 luz3 = luz1 & luz2
+
 print(luz3)  # Muestra: Apagado
 
 luz4 = luz1 | luz2
