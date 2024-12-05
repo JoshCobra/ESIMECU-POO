@@ -24,10 +24,19 @@ class VendingMachine:
             self.items.append(item)
 
     def purchase_item(self, index, pay):
-        pass
+        item = self.items[index]
+        if (item.price > pay):
+            return (None, pay)
+        else: 
+            self.balance += item.price 
+            change = pay - item.price
+            return (item, change)
 
     def __str__(self):
-        return f"Vending Machine: "
+        info = "Vending Machine Balance: " + str(self.balance) + "\n"
+        for item in self.items:
+            info += str(item) + "\n"
+        return info
 
 
 password = "apple"
