@@ -17,10 +17,11 @@ class VendingMachine:
         self.items = []
 
     def add_item(self, item_name, price, password):
-        if password != password: 
+        if self.password != password: 
             print("Incorrect Password")
         else:
-            pass
+            item = Item(item_name, price)
+            self.items.append(item)
 
     def purchase_item(self, index, pay):
         pass
