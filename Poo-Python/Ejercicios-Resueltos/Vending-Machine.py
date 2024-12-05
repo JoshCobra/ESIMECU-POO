@@ -30,7 +30,7 @@ class VendingMachine:
         else: 
             self.balance += item.price 
             change = pay - item.price
-            return (item, change)
+            return f" {item}, change: {change}"
 
     def __str__(self):
         info = "Vending Machine Balance: " + str(self.balance) + "\n"
@@ -46,7 +46,12 @@ vm = VendingMachine(password)
 
 vm.add_item("Oreos", 1.25, password)
 vm.add_item("Lays Chips", 1.5, password)
-vm.add_item("Coca-Cola", 1.75, wrong_pass)
+vm.add_item("Coca-Cola", 1.75, wrong_pass) #No se agrega por que tiene password incorrecto
 vm.add_item("Cheetos", 1.50, password)
+vm.add_item("Oreos", 1.25, password)
+vm.add_item("Coca-Cola", 1.75, password)
 
 print(vm)
+
+print(vm.purchase_item(0, 1))
+print(vm.purchase_item(2, 5))
