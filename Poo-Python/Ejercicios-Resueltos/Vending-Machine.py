@@ -33,7 +33,7 @@ class VendingMachine:
             return f" {item}, change: {change}"
 
     def __str__(self):
-        info = "Vending Machine Balance: " + str(self.balance) + "\n"
+        info = "\n Vending Machine Balance: " + str(self.balance) + "\n"
         for item in self.items:
             info += str(item) + "\n"
         return info
@@ -53,5 +53,8 @@ vm.add_item("Coca-Cola", 1.75, password)
 
 print(vm)
 
-print(vm.purchase_item(0, 1))
+print(vm.purchase_item(0, 1)) # No le alcanza a comprar y le devuelve su cambio 
 print(vm.purchase_item(2, 5))
+print(vm.purchase_item(4, 23))
+
+print(vm)
