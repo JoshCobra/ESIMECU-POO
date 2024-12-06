@@ -5,10 +5,13 @@ class Producto:
         self.stock = stock
         self.refrigerado = refrigerado
 
+    def __str__(self):
+        return f"{self.nombre} : {str(self.precio)}"
+
     def descontar_stock():
         pass
 
-    def revisar_disponibilidad(self):
+    def revisar_disponibilidad(self): # Eliminar después, solo para revisar que funcione bien
         if self.refrigerado:
             print(f"{self.nombre} - ${self.precio} (Disponibles: {self.stock}, Refrigerado)")
         else:
