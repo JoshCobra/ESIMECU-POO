@@ -1,3 +1,18 @@
+class Time:
+    def print_time(self):
+        self.hour = 9
+        self.minute = 45
+        self.second = 00
+        print('%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second))
+
+start = Time
+
+start.print_time()
+
+
+
+
+# -------------------------------------------
 class Contador:
     def __init__(self, min,seg):
         self.min = min
