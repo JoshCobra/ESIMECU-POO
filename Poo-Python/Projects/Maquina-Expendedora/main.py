@@ -6,7 +6,7 @@ class Producto:
         self.refrigerado = refrigerado
 
     def __str__(self):
-        return f"{self.nombre} : {str(self.precio)}"
+        return f"{self.nombre} - ${str(self.precio)}"
 
     def descontar_stock():
         pass
@@ -22,6 +22,7 @@ sabritas = Producto("sabritas",22.50, 4)
 cocacola = Producto("coca cola", 23, 5, True)
 doritos = Producto("doritos", 23.14, 0)
 
+print(sabritas)
 sabritas.revisar_disponibilidad() #sabritas - $22.5 (Disponibles: 4, No Refrigerado)
 cocacola.revisar_disponibilidad() #coca cola - $23 (Disponibles: 5, Refrigerado)
 doritos.revisar_disponibilidad() #doritos - $23.14 (Disponibles: 0, No Refrigerado)
