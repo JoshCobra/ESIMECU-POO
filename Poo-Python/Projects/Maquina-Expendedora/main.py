@@ -8,8 +8,8 @@ class Producto:
     def __str__(self):
         return f"{self.nombre} - ${str(self.precio)}"
 
-    def descontar_stock():
-        pass
+    # def descontar_stock():
+    #     pass
 
     def revisar_disponibilidad(self): # Eliminar después, solo para revisar que funcione bien
         if self.refrigerado:
