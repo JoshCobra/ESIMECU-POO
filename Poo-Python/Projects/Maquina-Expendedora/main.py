@@ -11,7 +11,7 @@ class Producto:
         return f"{self.nombre} - ${self.precio} (Stock: {self.stock})"
     
 
-# Coca_cola = Producto("Coca Cola",21.90 ,)
+# Coca_cola = Producto("Coca Cola",15 , 10)
 # print(Coca_cola)
 
 # Clase Bandeja
@@ -27,7 +27,7 @@ class Bandeja:
             self.productos[posicion] = producto
 
     def obtener_producto(self,posicion):
-        self.productos.get(posicion, None) # método get para obtener el producto indicando en su posición
+        self.productos.get(posicion, None) # método get para obtener el producto indicando mediante su posición
         # verifica si la posición existe y devuelve el producto. Si no, devuelve None.
 
     def mostrar_productos(self):
@@ -45,5 +45,5 @@ bandeja.agregar_producto("1", Producto("Pepsi", 15, 5))
 bandeja.mostrar_productos()
 
 # Obtener producto por su posición
-producto = bandeja.obtener_producto("0")
+producto = bandeja.obtener_producto("1")
 print(f"Producto seleccionado: {producto}")
