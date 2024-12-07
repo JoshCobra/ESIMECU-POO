@@ -1,11 +1,9 @@
 # Clase Producto
 class Producto:
-    def __init__(self, nombre, precio, stock, bandeja, categoria, refrigerado=False):
+    def __init__(self, nombre, precio, stock, refrigerado=False):
         self.nombre = nombre
         self.precio = precio
         self.stock = stock
-        self.bandeja = bandeja
-        self.categoria = categoria 
         self.refrigerado = refrigerado
 
     def __str__(self):
@@ -13,8 +11,8 @@ class Producto:
         return f"{self.nombre} - ${self.precio} (Stock: {self.stock})"
     
 
-# Doritos = Producto("Doritos",21.90,7,2,"snack")
-# print(Doritos)
+# Coca_cola = Producto("Coca Cola",21.90 ,)
+# print(Coca_cola)
 
 # Clase Bandeja
 class Bandeja:
@@ -36,7 +34,7 @@ class Bandeja:
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
 
-
+# Crear una bandeja
 bandeja = Bandeja("A")
 
 # Agregar productos
