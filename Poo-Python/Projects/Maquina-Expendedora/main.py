@@ -8,6 +8,15 @@ class Producto:
     def __str__(self):
         # devuelve información del producto, nombre,precio,stock
         return f"{self.nombre} - ${self.precio} (Stock: {self.stock})"
+
+# Clase Producto Snack    
+class ProductoSnack(Producto):
+    def __init__(self, nombre, precio, stock, tamanio):
+        super().__init__(nombre, precio, stock)
+        self.tamanio = tamanio
+
+    def __str__(self):
+        return f" {super().__str__()} Tamaño: {self.tamanio}gr"
     
 # Coca_cola = Producto("Coca Cola",15 , 10)
 # print(Coca_cola)
@@ -38,12 +47,12 @@ bandejaA = Bandeja("A")
 bandejaB = Bandeja("B")
 
 # Agregar productos
-bandejaA.agregar_producto("0", Producto("Coca-Cola 600ml", 18, 10))
-bandejaA.agregar_producto("1", Producto("Pepsi 600ml", 15, 5))
-bandejaA.agregar_producto("2", Producto("Sabritas", 20.40, 5))
+bandejaA.agregar_producto("0", Producto("Coca-Cola 600", 18, 10))
+bandejaA.agregar_producto("1", Producto("Pepsi 600", 15, 5))
+bandejaA.agregar_producto("2", ProductoSnack("Sabritas", 20.40, 5, 75))
 
-bandejaB.agregar_producto("0", Producto("Pepsi 600ml", 15, 6))
-bandejaB.agregar_producto("1", Producto("Doritos", 22, 7))
+bandejaB.agregar_producto("0", Producto("Pepsi 600", 15, 6))
+bandejaB.agregar_producto("1", ProductoSnack("Doritos", 22, 7, 76))
 
 # Mostrar productos
 bandejaA.mostrar_productos()
