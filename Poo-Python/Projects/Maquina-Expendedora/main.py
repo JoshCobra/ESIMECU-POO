@@ -30,21 +30,30 @@ class Bandeja:
         # verifica si la posición existe y devuelve el producto. Si no, devuelve None.
 
     def mostrar_productos(self):
+        print(f"\n -- PRODUCTOS DISPONIBLES BANDEJA {self.codigo} --")
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
 
 # Crear una bandeja
-bandeja = Bandeja("A")
+bandejaA = Bandeja("A")
+bandejaB = Bandeja("B")
 
 # Agregar productos
-bandeja.agregar_producto("0", Producto("Coca-Cola", 15, 10))
-bandeja.agregar_producto("1", Producto("Pepsi", 15, 5))
+bandejaA.agregar_producto("0", Producto("Coca-Cola 600ml", 18, 10))
+bandejaA.agregar_producto("1", Producto("Pepsi 600ml", 15, 5))
+bandejaA.agregar_producto("2", Producto("Sabritas", 20.40, 5))
+
+bandejaB.agregar_producto("0", Producto("Pepsi 600ml", 15, 6))
+bandejaB.agregar_producto("1", Producto("Doritos", 22, 7))
 
 # Mostrar productos
-bandeja.mostrar_productos()
+bandejaA.mostrar_productos()
+bandejaB.mostrar_productos()
 
 # Obtener producto por su posición
-producto = bandeja.obtener_producto("0")
-print(f"Producto seleccionado: {producto}")
+# producto = bandeja.obtener_producto("0")
+# print(f"Producto seleccionado: {producto}")
 
-print(bandeja.productos)
+# producto = bandeja.obtener_producto("1")
+# print(f"Producto seleccionado: {producto}")
+
