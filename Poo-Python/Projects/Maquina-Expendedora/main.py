@@ -1,10 +1,9 @@
 # Clase Producto
 class Producto:
-    def __init__(self, nombre, precio, stock, refrigerado=False):
+    def __init__(self, nombre, precio, stock):
         self.nombre = nombre
         self.precio = precio
         self.stock = stock
-        self.refrigerado = refrigerado
 
     def __str__(self):
         # devuelve información del producto, nombre,precio,stock
@@ -22,12 +21,12 @@ class Bandeja:
 
     def agregar_producto(self, posicion, producto):
         if posicion in self.productos:
-            print(f"Ya se encuentra un producto en la posicion {posicion}")
+            print(f"Ya se encuentra un producto en la posición {posicion}")
         else :
             self.productos[posicion] = producto
 
     def obtener_producto(self,posicion):
-        self.productos.get(posicion, None) # método get para obtener el producto indicando mediante su posición
+        return self.productos.get(posicion, None) # método get para obtener el producto indicando mediante su posición
         # verifica si la posición existe y devuelve el producto. Si no, devuelve None.
 
     def mostrar_productos(self):
