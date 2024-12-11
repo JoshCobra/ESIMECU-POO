@@ -9,7 +9,6 @@ class Producto:
         # devuelve información del producto, nombre,precio,stock
         return f"{self.nombre} - ${self.precio} (Stock: {self.stock})"
     
-
 # Coca_cola = Producto("Coca Cola",15 , 10)
 # print(Coca_cola)
 
@@ -34,7 +33,7 @@ class Bandeja:
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
 
-# Crear una bandeja
+# Crear bandeja
 bandejaA = Bandeja("A")
 bandejaB = Bandeja("B")
 
