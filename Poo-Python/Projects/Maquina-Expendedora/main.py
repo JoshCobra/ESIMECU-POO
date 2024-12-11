@@ -45,7 +45,7 @@ bandeja.agregar_producto("1", Producto("Pepsi", 15, 5))
 bandeja.mostrar_productos()
 
 # Obtener producto por su posición
-producto = bandeja.obtener_producto(0)
+producto = bandeja.obtener_producto("0")
 print(f"Producto seleccionado: {producto}")
 
 print(bandeja.productos)
