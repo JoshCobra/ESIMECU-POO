@@ -52,7 +52,7 @@ class Bandeja:
         # verifica si la posición existe y devuelve el producto. Si no, devuelve None.
 
     def mostrar_productos(self):
-        print(f"\n -- PRODUCTOS DISPONIBLES BANDEJA {self.codigo} --")
+        print(f"-- BANDEJA {self.codigo} --")
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
 
@@ -83,3 +83,34 @@ bandejaC.mostrar_productos()
 # producto = bandeja.obtener_producto("1")
 # print(f"Producto seleccionado: {producto}")
 
+class MaquinaExpendedora:
+    def __init__(self):
+        self.bandejas = {}
+        self.dinero_ingresado = 0.0
+
+    def agregar_bandeja(self, codigo):
+        if codigo in self.bandejas:
+            print(f"Bandeja {codigo} ya existe")
+        else:
+            self.bandejas[codigo] = Bandeja(codigo)
+        
+    def mostrar_productos(self):
+        print(f"\n -- PRODUCTOS DISPONIBLES --")
+        for codigo, bandeja in self.bandejas.items():
+            bandeja.mostrar_productos()
+        print()
+
+    def insertar_dinero(self, monto):
+        self.dinero_ingresado += monto
+        print(f"Dinero ingresado: ${self.dinero_ingresado:.2f}") #.2f delimita a dos decimales
+
+    def seleccionar_producto(self, codigo):
+        if len(codigo) != 2:
+            print("Codigo invalido. Use una letra (A-F) y un numero (0-10)")
+            return 
+        
+"""         letra, numero = codigo[0].upper(), codigo[1]
+        if letra not in self.bandejas or not numero.isdigit():
+            print("Codigo Invalido")
+            return  """
+        
