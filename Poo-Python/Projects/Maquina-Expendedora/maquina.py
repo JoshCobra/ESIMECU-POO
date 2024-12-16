@@ -55,6 +55,7 @@ class MaquinaExpendedora:
             return
 
         letra, numero = codigo[0].upper(), codigo[1]
+
         if letra not in self.bandejas or not numero.isdigit():
             print("Código inválido.")
             return

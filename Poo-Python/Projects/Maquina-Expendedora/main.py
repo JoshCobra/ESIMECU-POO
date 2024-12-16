@@ -31,9 +31,6 @@ class ProductoBebida(Producto):
         else:
             return f"{super().__str__()} Tamaño: {self.tamanio}ml (No Refrigerado)"
 
-    
-# Coca_cola = Producto("Coca Cola",15 , 10)
-# print(Coca_cola)
 
 # Clase Bandeja
 class Bandeja:
@@ -83,7 +80,7 @@ bandejaC.mostrar_productos()
 # producto = bandeja.obtener_producto("1")
 # print(f"Producto seleccionado: {producto}")
 
-class MaquinaExpendedora:
+class MaquinaExpendedora(Bandeja):
     def __init__(self):
         self.bandejas = {}
         self.dinero_ingresado = 0.0
@@ -107,10 +104,57 @@ class MaquinaExpendedora:
     def seleccionar_producto(self, codigo):
         if len(codigo) != 2:
             print("Codigo invalido. Use una letra (A-F) y un numero (0-10)")
-            return 
+            return None
         
-"""         letra, numero = codigo[0].upper(), codigo[1]
-        if letra not in self.bandejas or not numero.isdigit():
-            print("Codigo Invalido")
-            return  """
-        
+        letra, numero = codigo[0].upper(), codigo[1] #Dividir el código en letra y numero
+
+        if letra in self.bandejas and numero.isdigit():
+            numero = int(numero)
+            producto = self.bandejas[letra].obtener_producto(numero)
+            # Obtener producto debería ser accesible ya que cada valor en el diccionario de "self.bandejas" 
+            # contiene una estancia de la bandeja
+
+            if producto:
+                return producto
+            else: 
+                print(f"En la posición {codigo} no hay producto") 
+
+        else: 
+            print(f"Código Invalido. Verifica tu selección")
+        return None
+    
+    def cancelar_compra(self):
+        print(f"Compra cancelada. Devolviendo ${self.dinero_ingresado:.2f}")
+        self.dinero_ingresado = 0
+
+    def mostrar_menu(self):
+        while True:
+            print("\nMenú Principal:")
+            print("1. Mostrar productos")
+            print("2. Insertar dinero")
+            print("3. Comprar producto")
+            print("4. Cancelar compra")
+            print("5. Salir")
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == "1":
+                self.mostrar_productos()
+            elif opcion == "2":
+                try: 
+                    monto = float(input("Ingrese la cantidad de dinero: "))
+                    self.insertar_dinero(monto)
+                except ValueError: # Prevenir monto invalido, agarrar el error
+                    print("Monto inválido.")
+            elif opcion == "3":
+                codigo = input("Ingrese el código del producto (ejemplo: B2): ")
+                self.seleccionar_producto(codigo)
+            elif opcion == "4":
+                self.cancelar_compra()
+            elif opcion == "5":
+                print("Gracias por usar la máquina expendedora.")
+                break
+            else:
+                print("Opción inválida. Inténtelo de nuevo.")
+
+maquina1 = MaquinaExpendedora()
+maquina1.mostrar_menu()
