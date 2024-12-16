@@ -129,7 +129,7 @@ class MaquinaExpendedora(Bandeja):
 
     def mostrar_menu(self):
         while True:
-            print("\nMenú Principal:")
+            print("\nMAQUINA EXPENDEDORA:")
             print("1. Mostrar productos")
             print("2. Insertar dinero")
             print("3. Comprar producto")
