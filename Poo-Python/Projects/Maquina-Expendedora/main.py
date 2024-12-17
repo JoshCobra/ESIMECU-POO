@@ -54,7 +54,7 @@ class Bandeja:
             print(f"{self.codigo}{posicion}: {producto}")
 
 
-class MaquinaExpendedora(Bandeja):
+class MaquinaExpendedora:
     def __init__(self):
         self.bandejas = {}
         self.dinero_ingresado = 0.0
@@ -80,7 +80,8 @@ class MaquinaExpendedora(Bandeja):
             print("Codigo invalido. Use una letra (A-F) y un numero (0-10)")
             return None
         
-        letra, numero = codigo[0].upper(), codigo[1] #Dividir el código en letra y numero
+        letra = codigo[0].upper()
+        numero = codigo[1] #Dividir el código en letra y numero
 
         if letra in self.bandejas and numero.isdigit():
             numero = int(numero)
