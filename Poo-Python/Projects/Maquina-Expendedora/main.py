@@ -170,7 +170,8 @@ class MaquinaExpendedora:
                 self.mostrar_productos()
 
             print("1. Insertar dinero")
-            print("2. Comprar producto")
+            if monto > 0:
+                print("2. Comprar producto")
             print("3. Cancelar compra")
             print("4. Salir")
             print("5. Administrador")
@@ -182,12 +183,9 @@ class MaquinaExpendedora:
                     self.insertar_dinero(monto)
                 except ValueError: # Prevenir monto invalido, agarrar el error
                     print("Monto inválido.")
-            elif opcion == "2":
-                if monto <= 0:
-                    print("No has ingresado dinero")
-                else:
-                    codigo = input("Ingrese el código del producto (ejemplo: B2): ")
-                    self.seleccionar_producto(codigo)
+            elif opcion == "2" and monto > 0:
+                codigo = input("Ingrese el código del producto (ejemplo: B2): ")
+                self.seleccionar_producto(codigo)
             elif opcion == "3":
                 self.cancelar_compra()
             elif opcion == "4":
