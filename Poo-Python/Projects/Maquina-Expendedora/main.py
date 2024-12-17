@@ -77,33 +77,38 @@ class MaquinaExpendedora:
 
     def seleccionar_producto(self, codigo):
         if len(codigo) != 2:
-            print("Codigo invalido. Use una letra (A-F) y un numero (0-10)")
-            return None
+            print("Código inválido. Use una letra (A-F) y un número (0-4)")
+            return
+
+        letra, numero = codigo[0].upper(), codigo[1]
+
+        if letra not in self.bandejas or not numero.isdigit():
+            print("Código inválido.")
+            return
+
+        bandeja = self.bandejas[letra]
+        producto = bandeja.obtener_producto(numero)
         
-        letra = codigo[0].upper()
-        numero = codigo[1] #Dividir el código en letra y numero
-
-        if letra in self.bandejas and numero.isdigit():
-            numero = int(numero)
-            producto = self.bandejas[letra].obtener_producto(numero)
-            # Obtener producto debería ser accesible ya que cada valor en el diccionario de "self.bandejas" 
-            # contiene una estancia de la bandeja
-
-            if producto:
-                return producto
-            else: 
-                print(f"En la posición {codigo} no hay producto") 
-
-        else: 
-            print(f"Código Invalido. Verifica tu selección")
-        return None
+        if producto:
+            if producto.stock > 0:
+                if self.dinero_ingresado >= producto.precio:
+                    self.dinero_ingresado -= producto.precio
+                    producto.stock -= 1
+                    print(f"Has comprado {producto.nombre}. Cambio: ${self.dinero_ingresado:.2f}")
+                    self.dinero_ingresado = 0
+                else:
+                    print("Dinero insuficiente")
+            else:
+                print("Producto agotado")
+        else:
+            print("Producto no encontrado")
     
     def cancelar_compra(self):
         print(f"Compra cancelada. Devolviendo ${self.dinero_ingresado:.2f}")
         self.dinero_ingresado = 0
 
     def modo_administrador(self):
-        password = input("Ingrese contraseña de administrador: ")
+        password = str(input("Ingrese contraseña de administrador: "))
         if password == "12345":
             while True:
                 print("1. Insertar Bandejas")
@@ -112,15 +117,20 @@ class MaquinaExpendedora:
                 opcion = input("Seleccione una opción: ")
 
                 if opcion == "1":
+                    for letra in "ABCDEF":
+                        maquina1.agregar_bandeja(letra)
 
-                #elif opcion == "2":
+                elif opcion == "2":
+                    break
 
-                #elif opcion == "3":
+                elif opcion == "3":
+                    self.mostrar_menu()
                     break
                 else:
                     print("Opción inválida. Intenta de nuevo")
         else:
             print("Contraseña de administrador incorrecta")
+            self.mostrar_menu()
 
 
     def mostrar_menu(self):
@@ -131,7 +141,7 @@ class MaquinaExpendedora:
             print("2. Comprar producto")
             print("3. Cancelar compra")
             print("4. Salir")
-            print("5.Administrador")
+            print("5. Administrador")
             opcion = input("Seleccione una opción: ")
 
             if opcion == "1":
@@ -148,7 +158,7 @@ class MaquinaExpendedora:
             elif opcion == "4":
                 print("Gracias por usar la máquina expendedora")
             elif opcion == "5":
-
+                self.modo_administrador()
                 break
             else:
                 print("Opción inválida. Intenta de nuevo")
