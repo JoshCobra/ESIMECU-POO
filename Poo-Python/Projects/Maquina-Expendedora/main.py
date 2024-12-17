@@ -118,20 +118,37 @@ class MaquinaExpendedora:
 
                 if opcion == "1":
                     for letra in "ABCDEF":
-                        maquina1.agregar_bandeja(letra)
+                        self.agregar_bandeja(letra)
 
                 elif opcion == "2":
-                    bandejaA
-                    break
+                    codigo_bandeja = input("Ingrese el código de la bandeja: ").upper()
+                    if codigo_bandeja in self.bandejas:
+                        tipo_producto = input("Ingrese el tipo de producto (Snack/Bebida): ").lower()
+                        nombre = input("Ingrese el nombre del producto: ")
+                        precio = float(input("Ingrese el precio del producto: "))
+                        stock = int(input("Ingrese el stock del producto: "))
+                        tamanio = int(input("Ingrese el tamaño del producto: "))
+
+                        if tipo_producto == "snack":
+                            producto = ProductoSnack(nombre, precio, stock, tamanio)
+                        elif tipo_producto == "bebida":
+                            refrigerado = input("¿El producto es refrigerado? (si/no): ").lower() == "si"
+                            producto = ProductoBebida(nombre, precio, stock, tamanio, refrigerado)
+                        else:
+                            print("Tipo de producto inválido.")
+                            continue
+
+                        posicion = input("Ingrese la posición del producto en la bandeja: ")
+                        self.bandejas[codigo_bandeja].agregar_producto(posicion, producto)
+                    else:
+                        print("Código de bandeja inválido.")
 
                 elif opcion == "3":
-                    self.mostrar_menu()
                     break
                 else:
                     print("Opción inválida. Intenta de nuevo")
         else:
             print("Contraseña de administrador incorrecta")
-            self.mostrar_menu()
 
 
     def mostrar_menu(self):
