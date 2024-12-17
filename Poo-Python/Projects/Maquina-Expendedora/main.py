@@ -64,6 +64,9 @@ class MaquinaExpendedora:
         self.bandejas = {}
         self.dinero_ingresado = 0.0
 
+    def __del__(self): #destructor solo como demostración
+        print("La Maquina Expendedora ha sido Apagada Exitosamente")
+
     def agregar_bandeja(self, codigo):
         if codigo in self.bandejas:
             print(f"Bandeja {codigo} ya existe")
@@ -165,7 +168,7 @@ class MaquinaExpendedora:
             print("\n -- M A Q U I N A     E X P E N D E D O R A --")
             if monto == 0:
                 self.mostrar_productos()
-                
+
             print("1. Insertar dinero")
             print("2. Comprar producto")
             print("3. Cancelar compra")
@@ -218,3 +221,4 @@ maquina1.bandejas["C"].agregar_producto("1", BebidaRefrigerada("Coca Cola", 18, 
 maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Pepsi", 15, 10, 600))
 
 maquina1.mostrar_menu()
+del maquina1
