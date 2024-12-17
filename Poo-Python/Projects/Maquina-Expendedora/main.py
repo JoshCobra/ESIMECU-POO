@@ -102,6 +102,27 @@ class MaquinaExpendedora:
         print(f"Compra cancelada. Devolviendo ${self.dinero_ingresado:.2f}")
         self.dinero_ingresado = 0
 
+    def modo_administrador(self):
+        password = input("Ingrese contraseña de administrador: ")
+        if password == "12345":
+            while True:
+                print("1. Insertar Bandejas")
+                print("2. Insertar Productos")
+                print("3. Salir")
+                opcion = input("Seleccione una opción: ")
+
+                if opcion == "1":
+
+                #elif opcion == "2":
+
+                #elif opcion == "3":
+                    break
+                else:
+                    print("Opción inválida. Intenta de nuevo")
+        else:
+            print("Contraseña de administrador incorrecta")
+
+
     def mostrar_menu(self):
         while True:
             print("\n -- MAQUINA EXPENDEDORA --")
@@ -126,6 +147,8 @@ class MaquinaExpendedora:
                 self.cancelar_compra()
             elif opcion == "4":
                 print("Gracias por usar la máquina expendedora")
+            elif opcion == "5":
+
                 break
             else:
                 print("Opción inválida. Intenta de nuevo")
