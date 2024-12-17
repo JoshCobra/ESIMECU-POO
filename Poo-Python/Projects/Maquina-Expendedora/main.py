@@ -177,7 +177,6 @@ class MaquinaExpendedora:
                 except ValueError: # Prevenir monto invalido, agarrar el error
                     print("Monto inválido.")
             elif opcion == "2":
-                print(f"Tiene ${monto} de saldo disponible")
                 if monto <= 0:
                     print("No has ingresado dinero")
                 else:
@@ -201,17 +200,17 @@ maquina1.agregar_bandeja("B")
 maquina1.agregar_bandeja("C")
 
 maquina1.bandejas["A"].agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
-maquina1.bandejas["A"].agregar_producto("1", ProductoSnack("Sabritas", 21, 10, 76))
+maquina1.bandejas["A"].agregar_producto("1", ProductoSnack("Sabritas", 21, 5, 76))
 maquina1.bandejas["A"].agregar_producto("2", ProductoSnack("Gansito", 23, 10, 76))
-maquina1.bandejas["A"].agregar_producto("3", ProductoSnack("Doritos", 22, 10, 76))
+maquina1.bandejas["A"].agregar_producto("3", ProductoSnack("Doritos", 22, 1, 76))
 
 maquina1.bandejas["B"].agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
-maquina1.bandejas["B"].agregar_producto("1", ProductoSnack("Sabritas", 21, 10, 76))
-maquina1.bandejas["B"].agregar_producto("2", ProductoSnack("Gansito", 23, 10, 76))
-maquina1.bandejas["B"].agregar_producto("3", ProductoSnack("Doritos", 22, 10, 76))
+maquina1.bandejas["B"].agregar_producto("1", ProductoSnack("Sabritas", 21, 8, 76))
+maquina1.bandejas["B"].agregar_producto("2", ProductoSnack("Gansito", 23, 6, 76))
+maquina1.bandejas["B"].agregar_producto("3", ProductoSnack("Doritos", 22, 6, 76))
 
-maquina1.bandejas["C"].agregar_producto("0", BebidaRefrigerada("Coca Cola", 22, 10, 600, True))
-maquina1.bandejas["C"].agregar_producto("1", BebidaRefrigerada("Coca Cola", 22, 10, 600, True))
+maquina1.bandejas["C"].agregar_producto("0", BebidaRefrigerada("Coca Cola", 22, 5, 600, True))
+maquina1.bandejas["C"].agregar_producto("1", BebidaRefrigerada("Coca Cola", 22, 7, 600, True))
 maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Pepsi", 22, 10, 600))
 
 maquina1.mostrar_menu()
