@@ -88,7 +88,7 @@ class MaquinaExpendedora:
 
         bandeja = self.bandejas[letra]
         producto = bandeja.obtener_producto(numero)
-        
+
         if producto:
             if producto.stock > 0:
                 if self.dinero_ingresado >= producto.precio:
@@ -121,6 +121,7 @@ class MaquinaExpendedora:
                         maquina1.agregar_bandeja(letra)
 
                 elif opcion == "2":
+                    bandejaA
                     break
 
                 elif opcion == "3":
