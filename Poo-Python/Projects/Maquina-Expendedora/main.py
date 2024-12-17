@@ -105,7 +105,7 @@ class MaquinaExpendedora:
                     print(f"Has comprado {producto.nombre}. Cambio: ${self.dinero_ingresado:.2f}")
                     self.dinero_ingresado = 0
                 else:
-                    print("Dinero insuficiente")
+                    print(f"Dinero insuficiente, solo tienes ${self.dinero_ingresado}")
             else:
                 print("Producto agotado")
         else:
@@ -160,9 +160,12 @@ class MaquinaExpendedora:
 
 
     def mostrar_menu(self):
+        monto = 0
         while True:
             print("\n -- M A Q U I N A     E X P E N D E D O R A --")
-            self.mostrar_productos()
+            if monto == 0:
+                self.mostrar_productos()
+                
             print("1. Insertar dinero")
             print("2. Comprar producto")
             print("3. Cancelar compra")
@@ -186,6 +189,7 @@ class MaquinaExpendedora:
                 self.cancelar_compra()
             elif opcion == "4":
                 print("Gracias por usar la máquina expendedora")
+                break
             elif opcion == "5":
                 self.modo_administrador()
                 break
@@ -200,17 +204,17 @@ maquina1.agregar_bandeja("B")
 maquina1.agregar_bandeja("C")
 
 maquina1.bandejas["A"].agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
-maquina1.bandejas["A"].agregar_producto("1", ProductoSnack("Sabritas", 21, 5, 76))
-maquina1.bandejas["A"].agregar_producto("2", ProductoSnack("Gansito", 23, 10, 76))
+maquina1.bandejas["A"].agregar_producto("1", ProductoSnack("Sabritas", 20, 5, 45))
+maquina1.bandejas["A"].agregar_producto("2", ProductoSnack("Gansito", 19, 10, 50))
 maquina1.bandejas["A"].agregar_producto("3", ProductoSnack("Doritos", 22, 1, 76))
 
 maquina1.bandejas["B"].agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
-maquina1.bandejas["B"].agregar_producto("1", ProductoSnack("Sabritas", 21, 8, 76))
-maquina1.bandejas["B"].agregar_producto("2", ProductoSnack("Gansito", 23, 6, 76))
+maquina1.bandejas["B"].agregar_producto("1", ProductoSnack("Sabritas", 20, 8, 45))
+maquina1.bandejas["B"].agregar_producto("2", ProductoSnack("Gansito", 19, 6, 50))
 maquina1.bandejas["B"].agregar_producto("3", ProductoSnack("Doritos", 22, 6, 76))
 
-maquina1.bandejas["C"].agregar_producto("0", BebidaRefrigerada("Coca Cola", 22, 5, 600, True))
-maquina1.bandejas["C"].agregar_producto("1", BebidaRefrigerada("Coca Cola", 22, 7, 600, True))
-maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Pepsi", 22, 10, 600))
+maquina1.bandejas["C"].agregar_producto("0", BebidaRefrigerada("Coca Cola", 18, 5, 600, True))
+maquina1.bandejas["C"].agregar_producto("1", BebidaRefrigerada("Coca Cola", 18, 7, 600, True))
+maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Pepsi", 15, 10, 600))
 
 maquina1.mostrar_menu()
