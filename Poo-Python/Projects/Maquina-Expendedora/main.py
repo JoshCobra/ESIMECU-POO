@@ -30,6 +30,11 @@ class ProductoBebida(Producto):
             return f"{super().__str__()} Tamaño: {self.tamanio}ml (Refrigerado)"
         else:
             return f"{super().__str__()} Tamaño: {self.tamanio}ml (No Refrigerado)"
+        
+class BebidaRefrigerada(ProductoBebida):
+    def __init__(self, nombre, precio, stock, tamanio, refrigerado=True):
+        super().__init__(nombre, precio, stock, tamanio)
+        self.refrigerado = refrigerado
 
 
 # Clase Bandeja
@@ -71,9 +76,12 @@ class MaquinaExpendedora:
             bandeja.mostrar_productos()
         print()
 
-    def insertar_dinero(self, monto):
-        self.dinero_ingresado += monto
-        print(f"Dinero ingresado: ${self.dinero_ingresado:.2f}") #.2f delimita a dos decimales
+    def insertar_dinero(self, monto=0):
+        if monto <= 0:
+            print("Ingresa un monto valido")
+        else:
+            self.dinero_ingresado += monto
+            print(f"Dinero ingresado: ${self.dinero_ingresado:.2f}") #.2f delimita a dos decimales
 
     def seleccionar_producto(self, codigo):
         if len(codigo) != 2:
@@ -136,7 +144,7 @@ class MaquinaExpendedora:
                             producto = ProductoBebida(nombre, precio, stock, tamanio, refrigerado)
                         else:
                             print("Tipo de producto inválido.")
-                            continue
+                            continue # se utiliza continue para omitir el código restante y pasar a la siguiente iteración
 
                         posicion = input("Ingrese la posición del producto en la bandeja: ")
                         self.bandejas[codigo_bandeja].agregar_producto(posicion, producto)
@@ -153,7 +161,7 @@ class MaquinaExpendedora:
 
     def mostrar_menu(self):
         while True:
-            print("\n -- MAQUINA EXPENDEDORA --")
+            print("\n -- M A Q U I N A     E X P E N D E D O R A --")
             self.mostrar_productos()
             print("1. Insertar dinero")
             print("2. Comprar producto")
@@ -169,8 +177,12 @@ class MaquinaExpendedora:
                 except ValueError: # Prevenir monto invalido, agarrar el error
                     print("Monto inválido.")
             elif opcion == "2":
-                codigo = input("Ingrese el código del producto (ejemplo: B2): ")
-                self.seleccionar_producto(codigo)
+                print(f"Tiene ${monto} de saldo disponible")
+                if monto <= 0:
+                    print("No has ingresado dinero")
+                else:
+                    codigo = input("Ingrese el código del producto (ejemplo: B2): ")
+                    self.seleccionar_producto(codigo)
             elif opcion == "3":
                 self.cancelar_compra()
             elif opcion == "4":
@@ -180,6 +192,7 @@ class MaquinaExpendedora:
                 break
             else:
                 print("Opción inválida. Intenta de nuevo")
+
 
 maquina1 = MaquinaExpendedora()
 
@@ -197,8 +210,8 @@ maquina1.bandejas["B"].agregar_producto("1", ProductoSnack("Sabritas", 21, 10, 7
 maquina1.bandejas["B"].agregar_producto("2", ProductoSnack("Gansito", 23, 10, 76))
 maquina1.bandejas["B"].agregar_producto("3", ProductoSnack("Doritos", 22, 10, 76))
 
-maquina1.bandejas["C"].agregar_producto("0", ProductoBebida("Coca Cola", 22, 10, 600, True))
-maquina1.bandejas["C"].agregar_producto("1", ProductoBebida("Coca Cola", 22, 10, 600, True))
-maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Coca Cola", 22, 10, 600))
+maquina1.bandejas["C"].agregar_producto("0", BebidaRefrigerada("Coca Cola", 22, 10, 600, True))
+maquina1.bandejas["C"].agregar_producto("1", BebidaRefrigerada("Coca Cola", 22, 10, 600, True))
+maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Pepsi", 22, 10, 600))
 
 maquina1.mostrar_menu()
