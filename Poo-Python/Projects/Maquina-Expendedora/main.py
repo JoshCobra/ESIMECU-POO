@@ -49,7 +49,7 @@ class Bandeja:
         # verifica si la posición existe y devuelve el producto. Si no, devuelve None.
 
     def mostrar_productos(self):
-        print(f"-- BANDEJA {self.codigo} --")
+        print(f"\n-- BANDEJA {self.codigo} --")
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
 
@@ -66,7 +66,7 @@ class MaquinaExpendedora(Bandeja):
             self.bandejas[codigo] = Bandeja(codigo)
         
     def mostrar_productos(self):
-        print(f"\n -- PRODUCTOS DISPONIBLES --")
+        print(f" -- PRODUCTOS DISPONIBLES --")
         for codigo, bandeja in self.bandejas.items():
             bandeja.mostrar_productos()
         print()
@@ -103,28 +103,27 @@ class MaquinaExpendedora(Bandeja):
 
     def mostrar_menu(self):
         while True:
-            print("\nMAQUINA EXPENDEDORA:")
-            print("1. Mostrar productos")
-            print("2. Insertar dinero")
-            print("3. Comprar producto")
-            print("4. Cancelar compra")
-            print("5. Salir")
+            print("\n -- MAQUINA EXPENDEDORA --")
+            self.mostrar_productos()
+            print("1. Insertar dinero")
+            print("2. Comprar producto")
+            print("3. Cancelar compra")
+            print("4. Salir")
+            print("5.Administrador")
             opcion = input("Seleccione una opción: ")
 
             if opcion == "1":
-                self.mostrar_productos()
-            elif opcion == "2":
                 try: 
                     monto = float(input("Ingrese dinero: "))
                     self.insertar_dinero(monto)
                 except ValueError: # Prevenir monto invalido, agarrar el error
                     print("Monto inválido.")
-            elif opcion == "3":
+            elif opcion == "2":
                 codigo = input("Ingrese el código del producto (ejemplo: B2): ")
                 self.seleccionar_producto(codigo)
-            elif opcion == "4":
+            elif opcion == "3":
                 self.cancelar_compra()
-            elif opcion == "5":
+            elif opcion == "4":
                 print("Gracias por usar la máquina expendedora")
                 break
             else:
