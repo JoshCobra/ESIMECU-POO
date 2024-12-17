@@ -53,32 +53,6 @@ class Bandeja:
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
 
-# Crear bandeja
-bandejaA = Bandeja("A")
-bandejaB = Bandeja("B")
-bandejaC = Bandeja("C")
-
-# Agregar productos
-bandejaA.agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
-bandejaA.agregar_producto("1", ProductoSnack("Sabritas Adobadas", 21, 5, 73))
-bandejaA.agregar_producto("2", ProductoSnack("Sabritas", 20.40, 5, 75))
-
-bandejaB.agregar_producto("0", ProductoSnack("Doritos", 22, 7, 76))
-
-bandejaC.agregar_producto("0", ProductoBebida("Pepsi", 15, 6, 600, True))
-bandejaC.agregar_producto("1", ProductoBebida("Coca Cola", 18, 6, 600))
-
-# Mostrar productos
-bandejaA.mostrar_productos()
-bandejaB.mostrar_productos()
-bandejaC.mostrar_productos()
-
-# Obtener producto por su posición
-# producto = bandeja.obtener_producto("0")
-# print(f"Producto seleccionado: {producto}")
-
-# producto = bandeja.obtener_producto("1")
-# print(f"Producto seleccionado: {producto}")
 
 class MaquinaExpendedora(Bandeja):
     def __init__(self):
@@ -141,7 +115,7 @@ class MaquinaExpendedora(Bandeja):
                 self.mostrar_productos()
             elif opcion == "2":
                 try: 
-                    monto = float(input("Ingrese la cantidad de dinero: "))
+                    monto = float(input("Ingrese dinero: "))
                     self.insertar_dinero(monto)
                 except ValueError: # Prevenir monto invalido, agarrar el error
                     print("Monto inválido.")
@@ -151,10 +125,29 @@ class MaquinaExpendedora(Bandeja):
             elif opcion == "4":
                 self.cancelar_compra()
             elif opcion == "5":
-                print("Gracias por usar la máquina expendedora.")
+                print("Gracias por usar la máquina expendedora")
                 break
             else:
-                print("Opción inválida. Inténtelo de nuevo.")
+                print("Opción inválida. Intenta de nuevo")
 
 maquina1 = MaquinaExpendedora()
+
+maquina1.agregar_bandeja("A")
+maquina1.agregar_bandeja("B")
+maquina1.agregar_bandeja("C")
+
+maquina1.bandejas["A"].agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
+maquina1.bandejas["A"].agregar_producto("1", ProductoSnack("Sabritas", 21, 10, 76))
+maquina1.bandejas["A"].agregar_producto("2", ProductoSnack("Gansito", 23, 10, 76))
+maquina1.bandejas["A"].agregar_producto("3", ProductoSnack("Doritos", 22, 10, 76))
+
+maquina1.bandejas["B"].agregar_producto("0", ProductoSnack("Doritos", 22, 10, 76))
+maquina1.bandejas["B"].agregar_producto("1", ProductoSnack("Sabritas", 21, 10, 76))
+maquina1.bandejas["B"].agregar_producto("2", ProductoSnack("Gansito", 23, 10, 76))
+maquina1.bandejas["B"].agregar_producto("3", ProductoSnack("Doritos", 22, 10, 76))
+
+maquina1.bandejas["C"].agregar_producto("0", ProductoBebida("Coca Cola", 22, 10, 600, True))
+maquina1.bandejas["C"].agregar_producto("1", ProductoBebida("Coca Cola", 22, 10, 600, True))
+maquina1.bandejas["C"].agregar_producto("2", ProductoBebida("Coca Cola", 22, 10, 600))
+
 maquina1.mostrar_menu()
