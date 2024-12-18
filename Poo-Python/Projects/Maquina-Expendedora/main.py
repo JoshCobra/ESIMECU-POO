@@ -156,6 +156,7 @@ class MaquinaExpendedora:
                         print("Código de bandeja inválido.")
 
                 elif opcion == "3":
+                    self.mostrar_menu()
                     break
                 else:
                     print("Opción inválida. Intenta de nuevo")
