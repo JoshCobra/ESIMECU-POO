@@ -59,6 +59,7 @@ class Bandeja:
             print(f"{self.codigo}{posicion}: {producto}")
 
 
+#Clase Maquina Expendedora
 class MaquinaExpendedora:
     def __init__(self):
         self.bandejas = {}
@@ -160,7 +161,6 @@ class MaquinaExpendedora:
                     print("Opción inválida. Intenta de nuevo")
         else:
             print("Contraseña de administrador incorrecta")
-
 
     def mostrar_menu(self):
         monto = 0
