@@ -16,7 +16,7 @@ class ProductoSnack(Producto):
         self.tamanio = tamanio
 
     def __str__(self):
-        return f" {super().__str__()} Tamaño: {self.tamanio}gr"
+        return f" {super().__str__()} {self.tamanio}gr"
     
 # Clase Producto Bebida
 class ProductoBebida(Producto):
@@ -27,9 +27,9 @@ class ProductoBebida(Producto):
 
     def __str__(self):
         if self.refrigerado:
-            return f"{super().__str__()} Tamaño: {self.tamanio}ml (Refrigerado)"
+            return f"{super().__str__()} {self.tamanio}ml (Refrigerado)"
         else:
-            return f"{super().__str__()} Tamaño: {self.tamanio}ml (No Refrigerado)"
+            return f"{super().__str__()} {self.tamanio}ml (No Refrigerado)"
         
 class BebidaRefrigerada(ProductoBebida):
     def __init__(self, nombre, precio, stock, tamanio, refrigerado=True):
@@ -54,9 +54,10 @@ class Bandeja:
         # verifica si la posición existe y devuelve el producto. Si no, devuelve None.
 
     def mostrar_productos(self):
-        print(f"\n-- BANDEJA {self.codigo} --")
+        print(f"\n------------------- BANDEJA {self.codigo} --------------------")
         for posicion, producto in self.productos.items():
             print(f"{self.codigo}{posicion}: {producto}")
+        print('-'*50)
 
 
 #Clase Maquina Expendedora
@@ -75,7 +76,7 @@ class MaquinaExpendedora:
             self.bandejas[codigo] = Bandeja(codigo)
         
     def mostrar_productos(self):
-        print(f" -- PRODUCTOS DISPONIBLES --")
+        print(f"------------- PRODUCTOS DISPONIBLES --------------")
         for codigo, bandeja in self.bandejas.items():
             bandeja.mostrar_productos()
         print()
@@ -106,7 +107,9 @@ class MaquinaExpendedora:
                 if self.dinero_ingresado >= producto.precio:
                     self.dinero_ingresado -= producto.precio
                     producto.stock -= 1
+                    print("-"*38)
                     print(f"Has comprado {producto.nombre}. Cambio: ${self.dinero_ingresado:.2f}")
+                    print("-"*38)
                     self.dinero_ingresado = 0
                 else:
                     print(f"Dinero insuficiente, solo tienes ${self.dinero_ingresado}")
@@ -166,7 +169,7 @@ class MaquinaExpendedora:
     def mostrar_menu(self):
         monto = 0
         while True:
-            print("\n -- M A Q U I N A     E X P E N D E D O R A --")
+            print("\n --- M A Q U I N A      E X P E N D E D O R A ---")
             if monto == 0:
                 self.mostrar_productos()
 
