@@ -1,5 +1,4 @@
 #SobreCarga de Operadores
-
 class Punto:
     def __init__(self, x, y):
         self.x = x
@@ -21,13 +20,11 @@ print(f'Esta es la salida de el objeto P3: {p3}')
  
 
 # El método __init__ :
-
 class Persona:
     def __init__(self, nombre):
         self.nombre = nombre
 
 # El método __str__ :
-
 class Persona:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -40,7 +37,6 @@ print(p)  # Muestra: Persona llamada Ana
 
 
 # El método __len__ :
-
 class Grupo:
     def __init__(self, miembros):
         self.miembros = miembros
@@ -53,7 +49,6 @@ print(len(grupo))  # Muestra: 3
 
 
 # El método __add__ :
-
 class Numero:
     def __init__(self, valor):
         self.valor = valor
@@ -107,7 +102,6 @@ print(Escuela_1+Escuela_2)
 
 
 #Ejemplo 2 Funcionando
-
 class Contenedor:
     def __init__(self, litros):
         self.litros = litros
@@ -146,7 +140,6 @@ print(libro1.__str__())
 
 # Sobrecarga de operadores de comparación
 # Operadores de comparación nos devuelven un booleano
-
 class Persona:
     def __init__(self, nombre, edad):
         #Constructor
@@ -266,6 +259,7 @@ print(luz4)  # Muestra: Encendido
 
 luz5 = ~luz1
 print(luz5)  # Muestra: Apagado
+
 
 # Sobrecarga de operadores aritméticos
 class Vector:
