@@ -25,6 +25,8 @@ Te invitamos a clonar este repositorio en tu entorno local para practicar y cont
 - **Abstracción:** Simplificación de conceptos complejos mediante clases y objetos.
 - **Ejercicios prácticos:** Problemas reales que te ayudarán a entender la teoría y aplicarla en proyectos futuros.
 
+<hr>
+
 ### 🔍 Cómo buscar un archivo o contenido en este repositorio
 
 ¿Buscas algo en específico? Sigue estos pasos para encontrarlo fácilmente:
@@ -35,7 +37,8 @@ Te invitamos a clonar este repositorio en tu entorno local para practicar y cont
 
 ![Ejemplo de Busqueda](video-ejemplos/ejemplo-busqueda.gif)
 
-  
+<hr>
+
 *"La Técnica al Servicio de la Patria"*
 
 Pagina Oficial de [ESIME CULHUACAN](https://www.esimecu.ipn.mx/) 
