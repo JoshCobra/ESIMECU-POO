@@ -25,6 +25,16 @@ Te invitamos a clonar este repositorio en tu entorno local para practicar y cont
 - **Abstracción:** Simplificación de conceptos complejos mediante clases y objetos.
 - **Ejercicios prácticos:** Problemas reales que te ayudarán a entender la teoría y aplicarla en proyectos futuros.
 
+### 🔍 Cómo buscar un archivo o contenido en este repositorio
+
+¿Buscas algo en específico? Sigue estos pasos para encontrarlo fácilmente:
+
+1. Usa la barra de búsqueda justo encima de este repositorio
+2. Escribe la palabra clave o tema que deseas buscar (por ejemplo, "python class" o "c++ herencia").
+3. Presiona Enter y revisa los resultados. Estos incluirán todos los archivos que contengan la palabra clave.
+
+![Ejemplo de Busqueda](video-ejemplos/ejemplo-busqueda.gif)
+
   
 *"La Técnica al Servicio de la Patria"*
 
