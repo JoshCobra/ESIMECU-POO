@@ -26,6 +26,9 @@ class Pila:
             return self.items[-1]
         else:
             return None
+        # Realiza una verificación si la pila esta vacía o no, en caso de no estarlo
+        # Regresa la posición tope de la pila (es decir el primer elemento ingresado)
+        # utilizando la posición [-1] del arreglo que siempre sera el primer numero agregado
 
     def tamanio(self):
         return len(self.items)
