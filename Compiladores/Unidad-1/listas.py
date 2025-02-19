@@ -1,4 +1,5 @@
 # Repaso de listas, simples dobles y circulares
+# https://www.geeksforgeeks.org/python-linked-list/
 
 # Ejemplo de lista simple
 class NodoSimple:
