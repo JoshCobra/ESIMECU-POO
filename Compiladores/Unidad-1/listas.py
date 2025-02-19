@@ -22,6 +22,7 @@ class ListaSimple:
 
 # Ejemplo de uso de ListaSimple
 lista_simple = ListaSimple()
+
 print("\n")
 lista_simple.agregar(1)
 lista_simple.agregar(2)
@@ -59,6 +60,7 @@ class ListaDoble:
             nuevo_nodo.anterior = actual
 
 lista_doble = ListaDoble()
+
 print("\n")
 lista_doble.agregar("h")
 lista_doble.agregar("o")
@@ -96,3 +98,19 @@ class ListaCircular:
             nuevo_nodo.siguiente = self.cabeza
 
 
+lista_circular = ListaCircular()
+
+print("\n")
+lista_circular.agregar(9)
+lista_circular.agregar("circular")
+lista_circular.agregar("dato-3")
+lista_circular.agregar(34)
+
+# Imprimir los elementos de la lista circular
+actual = lista_circular.cabeza
+if actual:
+    while True:
+        print(actual.dato)
+        actual = actual.siguiente
+        if actual == lista_circular.cabeza:
+            break
