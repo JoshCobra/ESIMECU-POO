@@ -22,6 +22,7 @@ class ListaSimple:
 
 # Ejemplo de uso de ListaSimple
 lista_simple = ListaSimple()
+print("\n")
 lista_simple.agregar(1)
 lista_simple.agregar(2)
 lista_simple.agregar(3)
@@ -58,10 +59,16 @@ class ListaDoble:
             nuevo_nodo.anterior = actual
 
 lista_doble = ListaDoble()
-lista_doble.agregar(2)
-lista_doble.agregar(4)
-lista_doble.agregar(5)
+print("\n")
+lista_doble.agregar("h")
+lista_doble.agregar("o")
+lista_doble.agregar("l")
+lista_doble.agregar("a")
 
+actual = lista_doble.cabeza
+while actual:
+    print(actual.dato)
+    actual = actual.siguiente
 
 
             
@@ -87,3 +94,5 @@ class ListaCircular:
                 actual = actual.siguiente
             actual.siguiente = nuevo_nodo
             nuevo_nodo.siguiente = self.cabeza
+
+
