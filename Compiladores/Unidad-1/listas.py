@@ -20,6 +20,18 @@ class ListaSimple:
                 actual = actual.siguiente
             actual.siguiente = nuevo_nodo
 
+# Ejemplo de uso de ListaSimple
+lista_simple = ListaSimple()
+lista_simple.agregar(1)
+lista_simple.agregar(2)
+lista_simple.agregar(3)
+
+# Imprimir los elementos de la lista simple
+actual = lista_simple.cabeza
+while actual:
+    print(actual.dato)
+    actual = actual.siguiente
+
 
 
 
@@ -44,6 +56,11 @@ class ListaDoble:
                 actual = actual.siguiente
             actual.siguiente = nuevo_nodo
             nuevo_nodo.anterior = actual
+
+lista_doble = ListaDoble()
+lista_doble.agregar(2)
+lista_doble.agregar(4)
+lista_doble.agregar(5)
 
 
 
