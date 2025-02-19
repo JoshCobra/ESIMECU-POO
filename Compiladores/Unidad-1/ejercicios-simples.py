@@ -21,7 +21,7 @@ print(f"In Feb you spent {expenses[2] - expenses[1]} more dollars compared to Ja
 print(f'The first three months you spent {expenses[1] + expenses[2] + expenses[3]}')
 
 def exactly_spent():
-    spent = 2200
+    spent = 2000
 
     if spent in expenses:
         print(f"You spent exactly 2000 on month {expenses.index(spent)}") # Returns the position of the month in the array
@@ -29,3 +29,10 @@ def exactly_spent():
         print("You didnt spent exactly 2000 dollars on any month")
 
 exactly_spent()
+
+expenses.append(1980)
+print(expenses)
+
+expenses[3] -= 200
+
+print(expenses)
