@@ -13,6 +13,7 @@ class Pila:
         # En caso de que la pila este vacía retorna un verdadero o falso si tiene algo
 
     def apilar(self, item):
+        print(f"Apilando item: {item}")
         self.items.append(item)
         # Utilizamos append para agregar un nuevo item introducido por el usuario a la pila
 

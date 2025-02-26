@@ -7,14 +7,15 @@ class Queue:
 
     def __str__(self):
         return str(self.items)
-        # Este metodo imprime el arreglo completo
+        # Este método imprime el arreglo completo
 
     def esta_vacio(self):
         return self.items == []
 
-    def enqueue(self, index, item):
-        self.items.insert(index, item)
-        # Utilizando el metodo 'insert', que acepta un indice y un item a ingresar,
+    def enqueue(self, item):
+        print(f"Agregando el {item} a la cola")
+        self.items.insert(0, item)
+        # Utilizando el método 'insert', que acepta un indice y un item a ingresar,
         # agregamos a la lista el item que queremos
 
     def dequeue(self):
@@ -30,11 +31,19 @@ class Queue:
 # Ejemplo de uso
 q = Queue()
 q.enqueue(1)
-q.enqueue(30,2)
-q.enqueue(0,3)
+q.enqueue(2)
+q.enqueue(3)
 
-print(q)
+print(f"\nArreglo actual {q}")
 
-print(q.dequeue())  # Output: 1
-print(q.dequeue())  # Output: 2
-print(q.dequeue())  # Output: 3
+print(f"Salio el {q.dequeue()} de la cola")  # Output: 1
+
+print(f"\nArreglo actual {q}")
+q.enqueue(3)
+q.enqueue(5)
+print(f"\nArreglo actual {q}")
+
+print(f"Salio el {q.dequeue()} de la cola")  # Output: 2
+print(f"Salio el {q.dequeue()} de la cola")  # Output: 3
+
+print(f"\nArreglo actual {q}")
