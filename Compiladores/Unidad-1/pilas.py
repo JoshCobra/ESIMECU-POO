@@ -54,3 +54,68 @@ pila.desapilar()
 print("Tamaño de la pila después de desapilar:", pila.tamanio())
 
 print(f"La pila actual: {pila}")
+
+
+
+class Nodo:
+    def __init__(self, dato):
+        self.dato = dato
+        self.siguiente = None
+
+class PilaConNodos:
+    def __init__(self):
+        self.tope = None
+        self.tamanio = 0
+
+    def __str__(self):
+        actual = self.tope
+        elementos = []
+        while actual:
+            elementos.append(actual.dato)
+            actual = actual.siguiente
+        return str(elementos)
+
+    def esta_vacia(self):
+        return self.tope is None
+
+    def apilar(self, item):
+        print(f"Apilando item: {item}")
+        nuevo_nodo = Nodo(item)
+        nuevo_nodo.siguiente = self.tope
+        self.tope = nuevo_nodo
+        self.tamanio += 1
+
+    def desapilar(self):
+        if not self.esta_vacia():
+            print(f"Desapilando el item: {self.tope.dato}")
+            dato = self.tope.dato
+            self.tope = self.tope.siguiente
+            self.tamanio -= 1
+            return dato
+        else:
+            return None
+
+    def ver_tope(self):
+        if not self.esta_vacia():
+            return self.tope.dato
+        else:
+            return None
+
+    def obtener_tamanio(self):
+        return self.tamanio
+
+# Ejemplo de uso
+pila_nodos = PilaConNodos()
+pila_nodos.apilar(1)
+pila_nodos.apilar(2)
+pila_nodos.apilar(3)
+pila_nodos.apilar(4)
+pila_nodos.apilar(5)
+
+print(f"La pila actual: {pila_nodos}")
+print("Tope de la pila:", pila_nodos.ver_tope())
+print("Tamaño de la pila:", pila_nodos.obtener_tamanio())
+pila_nodos.desapilar()
+print("Tamaño de la pila después de desapilar:", pila_nodos.obtener_tamanio())
+
+print(f"La pila actual: {pila_nodos}")
