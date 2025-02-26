@@ -12,7 +12,7 @@ class Queue:
     def esta_vacio(self):
         return self.items == []
 
-    def enqueue(self, item, index):
+    def enqueue(self, index, item):
         self.items.insert(index, item)
         # Utilizando el metodo 'insert', que acepta un indice y un item a ingresar,
         # agregamos a la lista el item que queremos
@@ -29,7 +29,7 @@ class Queue:
 
 # Ejemplo de uso
 q = Queue()
-q.enqueue(1,1)
+q.enqueue(1)
 q.enqueue(30,2)
 q.enqueue(0,3)
 
