@@ -6,6 +6,8 @@ class NodoSimple:
     def __init__(self, dato):
         self.dato = dato
         self.siguiente = None
+    # En esta clase se define un nodo para una lista enlazada, el cual contiene un  'dato'
+    # y un apuntador al nodo 'siguiente' en este caso esta vacío por defecto
 
 class ListaSimple:
     def __init__(self):
@@ -20,6 +22,13 @@ class ListaSimple:
             while actual.siguiente:
                 actual = actual.siguiente
             actual.siguiente = nuevo_nodo
+    # En esta clase se esta definiendo una lista enlazada simple
+    # El método 'agregar' añade un nuevo nodo al final de lista
+    # Ahora si la lista esta vacía 'self.cabeza' es 'None', a continuación
+    # el nuevo nodo se convierte en la cabeza de la lista
+
+    # Si la lista NO esta vacía, se recorre hasta el final hasta encontrar el último nodo
+    # y se añade el nuevo nodo al final
 
 # Ejemplo de uso de ListaSimple
 lista_simple = ListaSimple()
