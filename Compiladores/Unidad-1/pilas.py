@@ -5,6 +5,9 @@ class Pila:
         self.items = []
         # Se define un arreglo vacío de "items"
 
+    def __str__(self): 
+        return str(self.items)
+
     def esta_vacia(self):
         return self.items == []
         # En caso de que la pila este vacía retorna un verdadero o falso si tiene algo
@@ -39,6 +42,8 @@ pila = Pila()
 pila.apilar(1)
 pila.apilar(2)
 pila.apilar(3)
+
+print(pila)
 print("Tope de la pila:", pila.ver_tope())
 print("Tamaño de la pila:", pila.tamanio())
 print("Desapilando:", pila.desapilar())
