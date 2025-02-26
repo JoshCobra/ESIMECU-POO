@@ -19,6 +19,7 @@ class Pila:
 
     def desapilar(self):
         if not self.esta_vacia():
+            print(f"Desapilando el item: {self.items[-1]}")
             return self.items.pop()
         else:
             return None
@@ -43,9 +44,13 @@ pila = Pila()
 pila.apilar(1)
 pila.apilar(2)
 pila.apilar(3)
+pila.apilar(4)
+pila.apilar(5)
 
-print(pila)
+print(f"La pila actual: {pila}")
 print("Tope de la pila:", pila.ver_tope())
 print("Tamaño de la pila:", pila.tamanio())
-print("Desapilando:", pila.desapilar())
+pila.desapilar()
 print("Tamaño de la pila después de desapilar:", pila.tamanio())
+
+print(f"La pila actual: {pila}")
