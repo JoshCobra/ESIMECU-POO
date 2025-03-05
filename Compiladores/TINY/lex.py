@@ -35,5 +35,18 @@ class Lexer:
 
     # Regresar el siguiente token
     def getToken(self):
-        pass
+        if self.curChar == '+': # Token de Suma
+            pass
+        elif self.curChar == '-': # Token de Resta
+            pass
+        elif self.curChar == '*': # Token de Multiplicación
+            pass
+        elif self.curChar == '/': # Token de Slash
+            pass
+        elif self.curChar == '\0': # EOF Token
+            pass
+        else:
+            # Token no identificado
+            pass
 
+        self.nextChar()
