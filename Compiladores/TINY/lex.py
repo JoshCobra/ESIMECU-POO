@@ -9,7 +9,8 @@ class Lexer:
     def nextChar(self):
         self.curPos += 1
         if self.curPos >= len(self.source):
-            self.curChar = '\0'
+            self.curChar = '\0' # Coloca el caracter en EOF (end-of-file marker) 
+                                # \0 es el caracter nulo
         else:
             self.curChar = self.source[self.curPos]
 
