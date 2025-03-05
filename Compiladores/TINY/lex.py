@@ -16,7 +16,9 @@ class Lexer:
 
     # Devolver el caracter 
     def peek(self):
-        pass
+        if self.curPos + 1 >= len(self.source):
+            return '\0'
+        return self.source[self.curPos + 1]
 
     # Token invalido, imprimir mensaje de error y salir
     def abort(self, message):
