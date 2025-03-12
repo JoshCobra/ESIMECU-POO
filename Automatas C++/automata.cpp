@@ -84,6 +84,9 @@ bool automata(string cadena) {
 
             case PUNTO_Y_COMA:
                 return (i == cadena.length() - 1); // Solo debe estar al final
+
+            case ERROR:
+                return false;
         }
     }
 
@@ -91,9 +94,16 @@ bool automata(string cadena) {
 }
 
 int main() {
+    string prueba2 = "12;";
     string prueba = "l=7, j, A[5][m][r], p=k, q, n, B[a], r=C[3][z];";
 
     if (automata(prueba)) {
+        cout << "Cadena válida." << endl;
+    } else {
+        cout << "Cadena inválida." << endl;
+    }
+
+    if (automata(prueba2)) {
         cout << "Cadena válida." << endl;
     } else {
         cout << "Cadena inválida." << endl;
