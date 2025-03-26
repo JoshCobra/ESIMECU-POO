@@ -1,12 +1,12 @@
 from lex import *
 
 def main():
-    source = 'ES una PruEBa = 123'
+    source = "+- */ >>= = !="
     lexer = Lexer(source)
 
-    while lexer.peek() != '\0':
-        print (lexer.curChar)
-        lexer.nextChar()
-
+    token = lexer.getToken()
+    while token.kind != TokenType.EOF:
+        print(token.kind)
+        token = lexer.getToken()
 
 main()
