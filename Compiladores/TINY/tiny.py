@@ -1,12 +1,20 @@
 from lex import *
+from parse import *
+import sys
 
 def main():
-    source = "# Comentario!\n IF 125  - ** == = /"
-    lexer = Lexer(source)
+    print ("Compilador TINY")
 
-    token = lexer.getToken()
-    while token.kind != TokenType.EOF:
-        print(token.kind)
-        token = lexer.getToken()
+    if len(sys.argv) !=2:
+        sys.exit("Error! El compilador necesita un archivo como argumento")
+    with open(sys.argv[1], 'r') as inputFile:
+        source = inputFile.read()
+
+    # Inicializamos el lexer    
+    lexer = Lexer(source)
+    parser = Parser(lexer)
+
+    parser.program() #Iniciar el Parser
+    print("Análisis Sintáctico Terminado")
 
 main()

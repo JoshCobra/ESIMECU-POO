@@ -156,7 +156,7 @@ class Token:
         for kind in TokenType:
             if kind.name == tokenText and kind.value >= 100 and kind.value < 200:
                 return kind
-        return None
+        return None 
 
 class TokenType(enum.Enum):
     EOF = -1
