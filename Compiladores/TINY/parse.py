@@ -53,6 +53,12 @@ class Parser:
                 # Espera una expresion.
                 self.expression()
 
+        elif self.checkToken(TokenType.IF):
+            print("STATEMENT-IF")
+            self.nextToken()
+            # self.comparasion()
+        
+
         # Nueva linea.
         self.nl()
 
