@@ -1,9 +1,11 @@
 import sys
 from lex import *
+from emit import *
 
 class Parser: 
-    def __init__(self, lexer):
+    def __init__(self, lexer, emitter):
         self.lexer = lexer
+        self.emitter = emitter
 
         self.symbols = set()
         self.labelDeclared = set()
@@ -37,14 +39,18 @@ class Parser:
         sys.exit(f'Error {message}')
 
     def program(self):
-        print("PROGRAM")
-
+        self.emitter.headerLine("#include <stdio.h>")
+        self.emitter.headerLine("int main(void){")
+        
         while self.checkToken(TokenType.NEWLINE):
             self.nextToken()
 
         while not self.checkToken(TokenType.EOF):
             self.statement()
-        
+
+        self.emitter.emitLine("return 0;")
+        self.emitter.emitLine("}")
+
         for label in self.labelsGotoed:
             if label not in self.labelsDeclared:
                 self.abort("Intentando GOTO ir a un label no declarado: " + label)
@@ -54,76 +60,86 @@ class Parser:
 
         # "PRINT" (expression | string)
         if self.checkToken(TokenType.PRINT):
-            print("STATEMENT-PRINT")
             self.nextToken()
 
             if self.checkToken(TokenType.STRING):
-                # String simple.
+                # Simple string, so print it.
+                self.emitter.emitLine("printf(\"" + self.curToken.text + "\\n\");")
                 self.nextToken()
+
             else:
-                # Espera una expresion.
+                # Expect an expression and print the result as a float.
+                self.emitter.emit("printf(\"%" + ".2f\\n\", (float)(")
                 self.expression()
+                self.emitter.emitLine("));")
 
         elif self.checkToken(TokenType.IF):
-            print("STATEMENT-IF")
             self.nextToken()
-            self.comparasion()
+            self.emitter.emit("if(")
+            self.comparison()
 
             self.match(TokenType.THEN)
             self.nl()
+            self.emitter.emitLine("){")
 
+            # Zero or more statements in the body.
             while not self.checkToken(TokenType.ENDIF):
                 self.statement()
-            
-            self.match(TokenType.ENDIF)
 
+            self.match(TokenType.ENDIF)
+            self.emitter.emitLine("}")
+
+        # "WHILE" comparison "REPEAT" block "ENDWHILE"
         elif self.checkToken(TokenType.WHILE):
-            print("STATEMENT-WHILE")
             self.nextToken()
+            self.emitter.emit("while(")
             self.comparasion()
 
             self.match(TokenType.REPEAT)
             self.nl()
+            self.emitter.emitLine("){")
 
+            # Zero or more statements in the loop body.
             while not self.checkToken(TokenType.ENDWHILE):
                 self.statement()
 
             self.match(TokenType.ENDWHILE)
+            self.emitter.emitLine("}")
 
+        # "LABEL" ident
         elif self.checkToken(TokenType.LABEL):
-            print("STATEMENT-LABEL")
             self.nextToken()
+
+            # Make sure this label doesn't already exist.
             if self.curToken.text in self.labelsDeclared:
                 self.abort("Label already exists: " + self.curToken.text)
             self.labelsDeclared.add(self.curToken.text)
 
+            self.emitter.emitLine(self.curToken.text + ":")
             self.match(TokenType.IDENT)
 
         # "GOTO" ident
         elif self.checkToken(TokenType.GOTO):
-            print("STATEMENT-GOTO")
             self.nextToken()
             self.labelsGotoed.add(self.curToken.text)
+            self.emitter.emitLine("goto " + self.curToken.text + ";")
             self.match(TokenType.IDENT)
 
-        # "GOTO" ident
-        elif self.checkToken(TokenType.GOTO):
-            print("STATEMENT-GOTO")
-            self.nextToken()
-            self.match(TokenType.IDENT)
-
-        # "LET" ident "=" expression
+        # "LET" ident = expression
         elif self.checkToken(TokenType.LET):
-            print("STATEMENT-LET")
             self.nextToken()
 
+            #  Check if ident exists in symbol table. If not, declare it.
             if self.curToken.text not in self.symbols:
                 self.symbols.add(self.curToken.text)
+                self.emitter.headerLine("float " + self.curToken.text + ";")
 
+            self.emitter.emit(self.curToken.text + " = ")
             self.match(TokenType.IDENT)
             self.match(TokenType.EQ)
-
+            
             self.expression()
+            self.emitter.emitLine(";")
 
         # "INPUT" ident
         elif self.checkToken(TokenType.INPUT):
