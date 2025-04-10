@@ -5,6 +5,10 @@ class Parser:
     def __init__(self, lexer):
         self.lexer = lexer
 
+        self.symbols = set()
+        self.labelDeclared = set()
+        self.labelsGotoed = set()
+
         self.curToken = None
         self.peekToken = None
         self.nextToken()
@@ -40,6 +44,10 @@ class Parser:
 
         while not self.checkToken(TokenType.EOF):
             self.statement()
+        
+        for label in self.labelsGotoed:
+            if label not in self.labelsDeclared:
+                self.abort("Intentando GOTO ir a un label no declarado: " + label)
 
     def statement(self):
         # Checa el primer token para ver que tipo es
@@ -85,6 +93,17 @@ class Parser:
         elif self.checkToken(TokenType.LABEL):
             print("STATEMENT-LABEL")
             self.nextToken()
+            if self.curToken.text in self.labelsDeclared:
+                self.abort("Label already exists: " + self.curToken.text)
+            self.labelsDeclared.add(self.curToken.text)
+
+            self.match(TokenType.IDENT)
+
+        # "GOTO" ident
+        elif self.checkToken(TokenType.GOTO):
+            print("STATEMENT-GOTO")
+            self.nextToken()
+            self.labelsGotoed.add(self.curToken.text)
             self.match(TokenType.IDENT)
 
         # "GOTO" ident
@@ -97,14 +116,23 @@ class Parser:
         elif self.checkToken(TokenType.LET):
             print("STATEMENT-LET")
             self.nextToken()
+
+            if self.curToken.text not in self.symbols:
+                self.symbols.add(self.curToken.text)
+
             self.match(TokenType.IDENT)
             self.match(TokenType.EQ)
+
             self.expression()
 
         # "INPUT" ident
         elif self.checkToken(TokenType.INPUT):
             print("STATEMENT-INPUT")
             self.nextToken()
+
+            if self.curToken.text not in self.symbols:
+                self.symbols.add(self.curToken.text)
+
             self.match(TokenType.IDENT)
 
         # This is not a valid statement. Error!
@@ -129,10 +157,12 @@ class Parser:
         if self.checkToken(TokenType.NUMBER): 
             self.nextToken()
         elif self.checkToken(TokenType.IDENT):
+            if self.curToken.text not in self.symbols:
+                self.abort("Se referencio una variable antes de assignarla: " + self.curToken.text)
             self.nextToken()
         else:
             # Error!
-            self.abort("Unexpected token at " + self.curToken.text)
+            self.abort("Token inesperado en: " + self.curToken.text)
     
     def term(self):
         print("TERM")
